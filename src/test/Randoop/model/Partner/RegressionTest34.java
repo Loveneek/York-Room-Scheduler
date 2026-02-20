@@ -1,0 +1,12424 @@
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class RegressionTest34 {
+
+    public static boolean debug = false;
+
+    public void assertBooleanArrayEquals(boolean[] expectedArray, boolean[] actualArray) {
+        if (expectedArray.length != actualArray.length) {
+            throw new AssertionError("Array lengths differ: " + expectedArray.length + " != " + actualArray.length);
+        }
+        for (int i = 0; i < expectedArray.length; i++) {
+            if (expectedArray[i] != actualArray[i]) {
+                throw new AssertionError("Arrays differ at index " + i + ": " + expectedArray[i] + " != " + actualArray[i]);
+            }
+        }
+    }
+
+    @Test
+    public void test17001() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17001");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean8 = partner3.isVerified();
+        partner3.logout();
+        double double10 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.logout();
+        double double18 = partner3.getHourlyRate();
+        boolean boolean19 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test17002() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17002");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        boolean boolean6 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+    }
+
+    @Test
+    public void test17003() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17003");
+        model.Partner partner3 = new model.Partner("partner", "", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getPassword();
+        boolean boolean6 = partner3.isVerified();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.logout();
+        double double9 = partner3.getHourlyRate();
+        java.lang.String str10 = partner3.getID();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+    }
+
+    @Test
+    public void test17004() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17004");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getEmail();
+        java.lang.String str11 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+    }
+
+    @Test
+    public void test17005() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17005");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getAccountType();
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+    }
+
+    @Test
+    public void test17006() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17006");
+        model.Partner partner3 = new model.Partner("", "partner", "partner");
+        double double4 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 50.0d + "'", double4 == 50.0d);
+    }
+
+    @Test
+    public void test17007() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17007");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getPassword();
+        partner3.setVerified(true);
+        double double18 = partner3.getHourlyRate();
+        java.lang.String str19 = partner3.getPassword();
+        boolean boolean20 = partner3.isVerified();
+        java.lang.String str21 = partner3.getEmail();
+        java.lang.String str22 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'", boolean20 == true);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+    }
+
+    @Test
+    public void test17008() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17008");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        boolean boolean12 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str14 = partner3.getID();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.login("hi!", "partner");
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17009() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17009");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("", "");
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.login("partner", "");
+        partner3.login("", "partner");
+        java.lang.Class<?> wildcardClass21 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertNotNull(wildcardClass21);
+    }
+
+    @Test
+    public void test17010() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17010");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        double double10 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getEmail();
+        partner3.logout();
+        partner3.login("", "partner");
+        partner3.logout();
+        java.lang.Class<?> wildcardClass20 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertNotNull(wildcardClass20);
+    }
+
+    @Test
+    public void test17011() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17011");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        boolean boolean8 = partner3.isVerified();
+        java.lang.String str9 = partner3.getPassword();
+        java.lang.String str10 = partner3.getID();
+        partner3.login("hi!", "partner");
+        partner3.logout();
+        double double15 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        double double17 = partner3.getHourlyRate();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17012() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17012");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getID();
+        boolean boolean14 = partner3.isVerified();
+        partner3.setVerified(true);
+        double double17 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        boolean boolean20 = partner3.isVerified();
+        java.lang.String str21 = partner3.getPassword();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+    }
+
+    @Test
+    public void test17013() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17013");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.viewProfile();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getEmail();
+        partner3.setVerified(false);
+        boolean boolean18 = partner3.isVerified();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test17014() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17014");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        boolean boolean10 = partner3.isVerified();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getEmail();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+    }
+
+    @Test
+    public void test17015() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17015");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        partner3.login("", "partner");
+        java.lang.String str18 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass19 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertNotNull(wildcardClass19);
+    }
+
+    @Test
+    public void test17016() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17016");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getID();
+        java.lang.Class<?> wildcardClass12 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test17017() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17017");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        boolean boolean12 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.setVerified(true);
+        partner3.logout();
+        partner3.login("hi!", "");
+        partner3.viewProfile();
+        java.lang.String str22 = partner3.getID();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+    }
+
+    @Test
+    public void test17018() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17018");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getAccountType();
+        double double11 = partner3.getHourlyRate();
+        boolean boolean12 = partner3.isVerified();
+        boolean boolean13 = partner3.isVerified();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test17019() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17019");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        boolean boolean8 = partner3.isVerified();
+        java.lang.String str9 = partner3.getEmail();
+        java.lang.String str10 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str12 = partner3.getID();
+        partner3.login("hi!", "partner");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+    }
+
+    @Test
+    public void test17020() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17020");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getAccountType();
+        partner3.viewProfile();
+        java.lang.String str11 = partner3.getPassword();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+    }
+
+    @Test
+    public void test17021() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17021");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getPassword();
+        java.lang.String str10 = partner3.getEmail();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+    }
+
+    @Test
+    public void test17022() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17022");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getEmail();
+        java.lang.String str10 = partner3.getEmail();
+        partner3.logout();
+        double double12 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+    }
+
+    @Test
+    public void test17023() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17023");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.logout();
+        partner3.login("", "hi!");
+        boolean boolean16 = partner3.isVerified();
+        double double17 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17024() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17024");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.login("", "hi!");
+        java.lang.String str17 = partner3.getPassword();
+        partner3.login("hi!", "partner");
+        java.lang.String str21 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "partner" + "'", str21, "partner");
+    }
+
+    @Test
+    public void test17025() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17025");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        partner3.login("partner", "");
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getPassword();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getID();
+        boolean boolean14 = partner3.isVerified();
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test17026() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17026");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.login("partner", "");
+        java.lang.String str17 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str19 = partner3.getID();
+        java.lang.String str20 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+    }
+
+    @Test
+    public void test17027() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17027");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        partner3.login("", "partner");
+        partner3.logout();
+        java.lang.String str15 = partner3.getID();
+        partner3.logout();
+        java.lang.Class<?> wildcardClass17 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test17028() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17028");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        java.lang.String str16 = partner3.getPassword();
+        double double17 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.login("partner", "");
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str25 = partner3.getPassword();
+        java.lang.String str26 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "" + "'", str25, "");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+    }
+
+    @Test
+    public void test17029() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17029");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.setVerified(true);
+        boolean boolean15 = partner3.isVerified();
+        java.lang.String str16 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+    }
+
+    @Test
+    public void test17030() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17030");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getPassword();
+        java.lang.String str10 = partner3.getID();
+        partner3.logout();
+        partner3.login("hi!", "");
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getPassword();
+        double double17 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17031() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17031");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getEmail();
+        java.lang.String str10 = partner3.getAccountType();
+        partner3.setVerified(true);
+        partner3.login("hi!", "partner");
+        java.lang.String str16 = partner3.getAccountType();
+        java.lang.String str17 = partner3.getEmail();
+        java.lang.String str18 = partner3.getID();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+    }
+
+    @Test
+    public void test17032() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17032");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.Class<?> wildcardClass12 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test17033() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17033");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.login("partner", "");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        java.lang.String str20 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass21 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertNotNull(wildcardClass21);
+    }
+
+    @Test
+    public void test17034() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17034");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.login("", "partner");
+        partner3.login("hi!", "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test17035() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17035");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        partner3.login("hi!", "");
+        boolean boolean17 = partner3.isVerified();
+        boolean boolean18 = partner3.isVerified();
+        java.lang.String str19 = partner3.getID();
+        partner3.logout();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+    }
+
+    @Test
+    public void test17036() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17036");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        boolean boolean8 = partner3.isVerified();
+        java.lang.String str9 = partner3.getEmail();
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.logout();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+    }
+
+    @Test
+    public void test17037() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17037");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(false);
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17038() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17038");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str10 = partner3.getEmail();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getPassword();
+        boolean boolean14 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test17039() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17039");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("", "");
+        partner3.logout();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getID();
+        java.lang.String str15 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+    }
+
+    @Test
+    public void test17040() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17040");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("", "");
+        boolean boolean12 = partner3.isVerified();
+        boolean boolean13 = partner3.isVerified();
+        partner3.setVerified(true);
+        partner3.setVerified(false);
+        boolean boolean18 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test17041() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17041");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str17 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17042() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17042");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.setVerified(true);
+        double double12 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        double double22 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertTrue("'" + double22 + "' != '" + 50.0d + "'", double22 == 50.0d);
+    }
+
+    @Test
+    public void test17043() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17043");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getID();
+        boolean boolean15 = partner3.isVerified();
+        java.lang.String str16 = partner3.getPassword();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17044() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17044");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.viewProfile();
+        double double11 = partner3.getHourlyRate();
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+    }
+
+    @Test
+    public void test17045() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17045");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        double double13 = partner3.getHourlyRate();
+        java.lang.String str14 = partner3.getEmail();
+        java.lang.String str15 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17046() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17046");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        java.lang.String str16 = partner3.getAccountType();
+        java.lang.String str17 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        double double21 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + double21 + "' != '" + 50.0d + "'", double21 == 50.0d);
+    }
+
+    @Test
+    public void test17047() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17047");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.logout();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getID();
+        partner3.viewProfile();
+        partner3.login("hi!", "partner");
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+    }
+
+    @Test
+    public void test17048() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17048");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        partner3.logout();
+        partner3.login("", "partner");
+    }
+
+    @Test
+    public void test17049() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17049");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        java.lang.String str18 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test17050() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17050");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getEmail();
+        boolean boolean13 = partner3.isVerified();
+        partner3.logout();
+        java.lang.Class<?> wildcardClass15 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertNotNull(wildcardClass15);
+    }
+
+    @Test
+    public void test17051() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17051");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.login("hi!", "partner");
+        double double16 = partner3.getHourlyRate();
+        java.lang.String str17 = partner3.getID();
+        partner3.viewProfile();
+        boolean boolean19 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        java.lang.Class<?> wildcardClass23 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(wildcardClass23);
+    }
+
+    @Test
+    public void test17052() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17052");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+    }
+
+    @Test
+    public void test17053() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17053");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getEmail();
+        double double14 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        double double16 = partner3.getHourlyRate();
+        java.lang.Class<?> wildcardClass17 = partner3.getClass();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test17054() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17054");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+    }
+
+    @Test
+    public void test17055() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17055");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getPassword();
+        partner3.setVerified(true);
+        double double18 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.login("partner", "partner");
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+    }
+
+    @Test
+    public void test17056() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17056");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        java.lang.String str11 = partner3.getEmail();
+        partner3.login("partner", "hi!");
+        partner3.setVerified(true);
+        boolean boolean17 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getID();
+        java.lang.String str20 = partner3.getEmail();
+        java.lang.String str21 = partner3.getEmail();
+        java.lang.String str22 = partner3.getID();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'", boolean17 == true);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "hi!" + "'", str20, "hi!");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+    }
+
+    @Test
+    public void test17057() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17057");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("", "");
+        partner3.login("", "");
+        partner3.logout();
+        java.lang.String str16 = partner3.getEmail();
+        partner3.login("hi!", "partner");
+        partner3.login("partner", "");
+        java.lang.String str23 = partner3.getEmail();
+        java.lang.String str24 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "hi!" + "'", str24, "hi!");
+    }
+
+    @Test
+    public void test17058() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17058");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.login("hi!", "");
+        java.lang.String str11 = partner3.getPassword();
+        boolean boolean12 = partner3.isVerified();
+        partner3.setVerified(true);
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getID();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17059() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17059");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.setVerified(true);
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.login("hi!", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17060() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17060");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getEmail();
+        java.lang.String str10 = partner3.getEmail();
+        double double11 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.login("hi!", "partner");
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+    }
+
+    @Test
+    public void test17061() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17061");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.login("hi!", "hi!");
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getID();
+        java.lang.String str15 = partner3.getAccountType();
+        java.lang.String str16 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17062() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17062");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getEmail();
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getPassword();
+        double double12 = partner3.getHourlyRate();
+        partner3.logout();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17063() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17063");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getEmail();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getAccountType();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str9 = partner3.getAccountType();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+    }
+
+    @Test
+    public void test17064() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17064");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getAccountType();
+        partner3.login("partner", "");
+        boolean boolean13 = partner3.isVerified();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.Class<?> wildcardClass15 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertNotNull(wildcardClass15);
+    }
+
+    @Test
+    public void test17065() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17065");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str17 = partner3.getEmail();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17066() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17066");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getPassword();
+        partner3.setVerified(true);
+        double double18 = partner3.getHourlyRate();
+        java.lang.String str19 = partner3.getPassword();
+        java.lang.String str20 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+    }
+
+    @Test
+    public void test17067() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17067");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.login("", "partner");
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getID();
+        partner3.login("partner", "");
+        double double20 = partner3.getHourlyRate();
+        partner3.logout();
+        java.lang.String str22 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertTrue("'" + double20 + "' != '" + 50.0d + "'", double20 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+    }
+
+    @Test
+    public void test17068() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17068");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        java.lang.String str11 = partner3.getPassword();
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17069() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17069");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getPassword();
+        boolean boolean10 = partner3.isVerified();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getID();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str17 = partner3.getPassword();
+        java.lang.String str18 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test17070() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17070");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        double double4 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 50.0d + "'", double4 == 50.0d);
+    }
+
+    @Test
+    public void test17071() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17071");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getID();
+        boolean boolean14 = partner3.isVerified();
+        double double15 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+    }
+
+    @Test
+    public void test17072() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17072");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.login("", "");
+        partner3.login("", "partner");
+        partner3.login("partner", "");
+        partner3.login("", "");
+        java.lang.String str18 = partner3.getEmail();
+        java.lang.String str19 = partner3.getEmail();
+        partner3.login("partner", "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+    }
+
+    @Test
+    public void test17073() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17073");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        partner3.viewProfile();
+        boolean boolean8 = partner3.isVerified();
+        boolean boolean9 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+    }
+
+    @Test
+    public void test17074() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17074");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getID();
+        partner3.logout();
+        double double13 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str17 = partner3.getAccountType();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17075() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17075");
+        model.Partner partner3 = new model.Partner("hi!", "", "partner");
+        java.lang.String str4 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        partner3.login("", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "" + "'", str4, "");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+    }
+
+    @Test
+    public void test17076() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17076");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getID();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        boolean boolean11 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.login("hi!", "hi!");
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+    }
+
+    @Test
+    public void test17077() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17077");
+        model.Partner partner3 = new model.Partner("partner", "", "partner");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test17078() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17078");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        double double13 = partner3.getHourlyRate();
+        boolean boolean14 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str16 = partner3.getID();
+        double double17 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17079() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17079");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        double double4 = partner3.getHourlyRate();
+        boolean boolean5 = partner3.isVerified();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getAccountType();
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        boolean boolean13 = partner3.isVerified();
+        partner3.login("partner", "hi!");
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 50.0d + "'", double4 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test17080() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17080");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        partner3.login("", "partner");
+        partner3.logout();
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass16 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertNotNull(wildcardClass16);
+    }
+
+    @Test
+    public void test17081() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17081");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getAccountType();
+        java.lang.String str16 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17082() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17082");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.login("", "");
+        partner3.login("partner", "partner");
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.logout();
+        java.lang.Class<?> wildcardClass18 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass18);
+    }
+
+    @Test
+    public void test17083() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17083");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("", "");
+        boolean boolean12 = partner3.isVerified();
+        boolean boolean13 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getID();
+        boolean boolean17 = partner3.isVerified();
+        java.lang.String str18 = partner3.getEmail();
+        boolean boolean19 = partner3.isVerified();
+        java.lang.Class<?> wildcardClass20 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertNotNull(wildcardClass20);
+    }
+
+    @Test
+    public void test17084() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17084");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.login("", "hi!");
+        partner3.login("partner", "hi!");
+        partner3.setVerified(true);
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17085() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17085");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.viewProfile();
+        boolean boolean13 = partner3.isVerified();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        partner3.login("partner", "");
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17086() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17086");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        double double14 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        java.lang.String str16 = partner3.getEmail();
+        java.lang.String str17 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.login("", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17087() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17087");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getEmail();
+        double double5 = partner3.getHourlyRate();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getEmail();
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.setVerified(true);
+        partner3.login("hi!", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + double5 + "' != '" + 50.0d + "'", double5 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+    }
+
+    @Test
+    public void test17088() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17088");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.login("partner", "hi!");
+        boolean boolean17 = partner3.isVerified();
+        java.lang.String str18 = partner3.getPassword();
+        java.lang.String str19 = partner3.getAccountType();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17089() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17089");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.login("", "hi!");
+        partner3.login("partner", "hi!");
+        partner3.login("partner", "");
+        java.lang.String str16 = partner3.getAccountType();
+        boolean boolean17 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17090() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17090");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        partner3.login("", "partner");
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17091() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17091");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        partner3.setVerified(true);
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.setVerified(false);
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getEmail();
+        java.lang.String str13 = partner3.getPassword();
+        partner3.logout();
+        boolean boolean15 = partner3.isVerified();
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+    }
+
+    @Test
+    public void test17092() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17092");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        partner3.login("", "hi!");
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+    }
+
+    @Test
+    public void test17093() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17093");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        double double6 = partner3.getHourlyRate();
+        double double7 = partner3.getHourlyRate();
+        partner3.logout();
+        java.lang.String str9 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+    }
+
+    @Test
+    public void test17094() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17094");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean10 = partner3.isVerified();
+        partner3.login("", "hi!");
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.login("", "partner");
+        partner3.setVerified(false);
+        java.lang.String str21 = partner3.getEmail();
+        partner3.setVerified(false);
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+    }
+
+    @Test
+    public void test17095() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17095");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        java.lang.String str6 = partner3.getEmail();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        double double9 = partner3.getHourlyRate();
+        java.lang.String str10 = partner3.getPassword();
+        java.lang.String str11 = partner3.getEmail();
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getEmail();
+        double double14 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17096() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17096");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getID();
+        double double13 = partner3.getHourlyRate();
+        boolean boolean14 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test17097() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17097");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        partner3.login("partner", "");
+        partner3.viewProfile();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17098() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17098");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.logout();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.login("", "partner");
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str21 = partner3.getPassword();
+        java.lang.String str22 = partner3.getAccountType();
+        java.lang.String str23 = partner3.getAccountType();
+        boolean boolean24 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "partner" + "'", str22, "partner");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "partner" + "'", str23, "partner");
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+    }
+
+    @Test
+    public void test17099() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17099");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getPassword();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getPassword();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17100() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17100");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str11 = partner3.getAccountType();
+        boolean boolean12 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+    }
+
+    @Test
+    public void test17101() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17101");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        partner3.login("", "partner");
+        java.lang.String str14 = partner3.getEmail();
+        double double15 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+    }
+
+    @Test
+    public void test17102() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17102");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getID();
+        boolean boolean8 = partner3.isVerified();
+        partner3.logout();
+        boolean boolean10 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+    }
+
+    @Test
+    public void test17103() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17103");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getID();
+        partner3.login("", "");
+        java.lang.String str10 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17104() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17104");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getID();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getEmail();
+        java.lang.String str17 = partner3.getEmail();
+        java.lang.String str18 = partner3.getEmail();
+        java.lang.String str19 = partner3.getAccountType();
+        java.lang.String str20 = partner3.getPassword();
+        partner3.login("", "partner");
+        java.lang.String str24 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass25 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+        org.junit.Assert.assertNotNull(wildcardClass25);
+    }
+
+    @Test
+    public void test17105() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17105");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.login("hi!", "");
+        java.lang.String str11 = partner3.getEmail();
+        partner3.setVerified(false);
+        partner3.logout();
+        boolean boolean15 = partner3.isVerified();
+        double double16 = partner3.getHourlyRate();
+        boolean boolean17 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+    }
+
+    @Test
+    public void test17106() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17106");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.setVerified(true);
+        partner3.logout();
+        java.lang.Class<?> wildcardClass13 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertNotNull(wildcardClass13);
+    }
+
+    @Test
+    public void test17107() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17107");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.setVerified(true);
+        partner3.login("", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+    }
+
+    @Test
+    public void test17108() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17108");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getAccountType();
+        double double12 = partner3.getHourlyRate();
+        double double13 = partner3.getHourlyRate();
+        partner3.login("", "partner");
+        partner3.login("partner", "hi!");
+        java.lang.String str20 = partner3.getAccountType();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+    }
+
+    @Test
+    public void test17109() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17109");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        partner3.login("hi!", "");
+        partner3.login("partner", "partner");
+        partner3.logout();
+        partner3.login("hi!", "partner");
+        boolean boolean20 = partner3.isVerified();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+    }
+
+    @Test
+    public void test17110() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17110");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.login("partner", "partner");
+        double double8 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+    }
+
+    @Test
+    public void test17111() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17111");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.login("partner", "hi!");
+        partner3.setVerified(false);
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+    }
+
+    @Test
+    public void test17112() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17112");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.logout();
+        partner3.setVerified(false);
+        partner3.logout();
+        java.lang.String str17 = partner3.getEmail();
+        double double18 = partner3.getHourlyRate();
+        partner3.login("", "partner");
+        java.lang.String str22 = partner3.getAccountType();
+        java.lang.String str23 = partner3.getID();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "partner" + "'", str22, "partner");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "hi!" + "'", str23, "hi!");
+    }
+
+    @Test
+    public void test17113() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17113");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.login("partner", "");
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getAccountType();
+        java.lang.String str17 = partner3.getAccountType();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17114() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17114");
+        model.Partner partner3 = new model.Partner("", "", "");
+        partner3.viewProfile();
+        java.lang.String str5 = partner3.getEmail();
+        java.lang.String str6 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        boolean boolean10 = partner3.isVerified();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17115() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17115");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getEmail();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.login("hi!", "partner");
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getAccountType();
+        double double13 = partner3.getHourlyRate();
+        partner3.logout();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getAccountType();
+        java.lang.String str17 = partner3.getPassword();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17116() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17116");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        double double11 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getEmail();
+        double double14 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17117() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17117");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.String str16 = partner3.getPassword();
+        partner3.login("", "partner");
+        java.lang.String str20 = partner3.getEmail();
+        java.lang.String str21 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+    }
+
+    @Test
+    public void test17118() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17118");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        java.lang.String str9 = partner3.getID();
+        boolean boolean10 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.login("", "");
+        java.lang.String str15 = partner3.getID();
+        partner3.viewProfile();
+        partner3.login("", "hi!");
+        java.lang.String str20 = partner3.getAccountType();
+        java.lang.String str21 = partner3.getEmail();
+        java.lang.String str22 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "partner" + "'", str22, "partner");
+    }
+
+    @Test
+    public void test17119() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17119");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.setVerified(true);
+        java.lang.String str18 = partner3.getID();
+        java.lang.String str19 = partner3.getEmail();
+        java.lang.String str20 = partner3.getAccountType();
+        java.lang.String str21 = partner3.getAccountType();
+        boolean boolean22 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(true);
+        boolean boolean26 = partner3.isVerified();
+        java.lang.String str27 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "partner" + "'", str21, "partner");
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + true + "'", boolean22 == true);
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'", boolean26 == true);
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "hi!" + "'", str27, "hi!");
+    }
+
+    @Test
+    public void test17120() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17120");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.login("", "");
+        java.lang.String str16 = partner3.getID();
+        partner3.logout();
+        java.lang.String str18 = partner3.getID();
+        java.lang.String str19 = partner3.getEmail();
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+    }
+
+    @Test
+    public void test17121() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17121");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.login("partner", "");
+        double double15 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        java.lang.String str18 = partner3.getAccountType();
+        java.lang.String str19 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17122() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17122");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.Class<?> wildcardClass12 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test17123() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17123");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getPassword();
+        double double9 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        double double12 = partner3.getHourlyRate();
+        partner3.login("hi!", "hi!");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+    }
+
+    @Test
+    public void test17124() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17124");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "partner");
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.setVerified(false);
+    }
+
+    @Test
+    public void test17125() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17125");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getPassword();
+        java.lang.String str11 = partner3.getID();
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+    }
+
+    @Test
+    public void test17126() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17126");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.login("partner", "partner");
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+    }
+
+    @Test
+    public void test17127() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17127");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.login("hi!", "partner");
+        boolean boolean11 = partner3.isVerified();
+        partner3.setVerified(false);
+        double double14 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17128() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17128");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getAccountType();
+        double double14 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17129() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17129");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getID();
+        partner3.login("partner", "hi!");
+        java.lang.String str18 = partner3.getAccountType();
+        java.lang.String str19 = partner3.getAccountType();
+        boolean boolean20 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str22 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'", boolean20 == true);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+    }
+
+    @Test
+    public void test17130() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17130");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.viewProfile();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getID();
+        partner3.viewProfile();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17131() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17131");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getEmail();
+        java.lang.String str5 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str7 = partner3.getPassword();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getEmail();
+        java.lang.String str11 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass12 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test17132() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17132");
+        model.Partner partner3 = new model.Partner("", "partner", "partner");
+        double double4 = partner3.getHourlyRate();
+        java.lang.String str5 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(false);
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 50.0d + "'", double4 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+    }
+
+    @Test
+    public void test17133() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17133");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test17134() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17134");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.login("hi!", "partner");
+        double double18 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        partner3.logout();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+    }
+
+    @Test
+    public void test17135() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17135");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.login("", "");
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getPassword();
+        java.lang.Class<?> wildcardClass17 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test17136() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17136");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        double double13 = partner3.getHourlyRate();
+        boolean boolean14 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str16 = partner3.getEmail();
+        double double17 = partner3.getHourlyRate();
+        double double18 = partner3.getHourlyRate();
+        partner3.login("partner", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+    }
+
+    @Test
+    public void test17137() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17137");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "hi!");
+        partner3.login("hi!", "partner");
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getAccountType();
+        double double11 = partner3.getHourlyRate();
+        partner3.login("partner", "hi!");
+        partner3.login("partner", "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+    }
+
+    @Test
+    public void test17138() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17138");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        boolean boolean6 = partner3.isVerified();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getAccountType();
+        double double9 = partner3.getHourlyRate();
+        java.lang.Class<?> wildcardClass10 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass10);
+    }
+
+    @Test
+    public void test17139() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17139");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getID();
+        boolean boolean10 = partner3.isVerified();
+        partner3.setVerified(false);
+        java.lang.Class<?> wildcardClass13 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertNotNull(wildcardClass13);
+    }
+
+    @Test
+    public void test17140() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17140");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        double double8 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.String str16 = partner3.getPassword();
+        partner3.login("", "hi!");
+        double double20 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double20 + "' != '" + 50.0d + "'", double20 == 50.0d);
+    }
+
+    @Test
+    public void test17141() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17141");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "hi!");
+        partner3.login("hi!", "partner");
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getPassword();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+    }
+
+    @Test
+    public void test17142() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17142");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        partner3.login("", "");
+        double double15 = partner3.getHourlyRate();
+        partner3.login("partner", "");
+        double double19 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(false);
+        double double23 = partner3.getHourlyRate();
+        java.lang.String str24 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double23 + "' != '" + 50.0d + "'", double23 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+    }
+
+    @Test
+    public void test17143() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17143");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.login("", "hi!");
+        java.lang.Class<?> wildcardClass13 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass13);
+    }
+
+    @Test
+    public void test17144() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17144");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getID();
+        double double15 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        java.lang.String str18 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+    }
+
+    @Test
+    public void test17145() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17145");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.login("", "");
+        partner3.login("partner", "partner");
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.login("", "hi!");
+        double double17 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        boolean boolean19 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test17146() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17146");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str10 = partner3.getPassword();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+    }
+
+    @Test
+    public void test17147() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17147");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getEmail();
+        double double14 = partner3.getHourlyRate();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17148() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17148");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getEmail();
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.logout();
+        partner3.login("partner", "");
+        partner3.login("", "partner");
+        partner3.setVerified(false);
+        java.lang.String str21 = partner3.getPassword();
+        java.lang.String str22 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str24 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "partner" + "'", str24, "partner");
+    }
+
+    @Test
+    public void test17149() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17149");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        partner3.logout();
+        double double11 = partner3.getHourlyRate();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+    }
+
+    @Test
+    public void test17150() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17150");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        double double8 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.login("partner", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+    }
+
+    @Test
+    public void test17151() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17151");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.login("hi!", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+    }
+
+    @Test
+    public void test17152() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17152");
+        model.Partner partner3 = new model.Partner("", "hi!", "hi!");
+        partner3.login("partner", "partner");
+        partner3.login("hi!", "hi!");
+        boolean boolean10 = partner3.isVerified();
+        double double11 = partner3.getHourlyRate();
+        partner3.login("", "");
+        partner3.setVerified(true);
+        partner3.logout();
+        partner3.viewProfile();
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+    }
+
+    @Test
+    public void test17153() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17153");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        java.lang.String str20 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+    }
+
+    @Test
+    public void test17154() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17154");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        double double12 = partner3.getHourlyRate();
+        double double13 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+    }
+
+    @Test
+    public void test17155() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17155");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getID();
+        partner3.login("hi!", "hi!");
+        java.lang.String str17 = partner3.getEmail();
+        double double18 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+    }
+
+    @Test
+    public void test17156() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17156");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.setVerified(false);
+        partner3.login("partner", "partner");
+        boolean boolean17 = partner3.isVerified();
+        java.lang.String str18 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.Class<?> wildcardClass21 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertNotNull(wildcardClass21);
+    }
+
+    @Test
+    public void test17157() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17157");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        partner3.login("", "partner");
+        java.lang.String str11 = partner3.getPassword();
+        partner3.logout();
+        double double13 = partner3.getHourlyRate();
+        partner3.login("hi!", "");
+        java.lang.String str17 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17158() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17158");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.login("hi!", "partner");
+        partner3.login("hi!", "partner");
+        java.lang.String str19 = partner3.getPassword();
+        double double20 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertTrue("'" + double20 + "' != '" + 50.0d + "'", double20 == 50.0d);
+    }
+
+    @Test
+    public void test17159() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17159");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.login("", "");
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str16 = partner3.getEmail();
+        partner3.logout();
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17160() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17160");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.login("", "");
+        partner3.setVerified(true);
+        partner3.setVerified(false);
+        java.lang.String str19 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17161() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17161");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getID();
+        double double8 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+    }
+
+    @Test
+    public void test17162() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17162");
+        model.Partner partner3 = new model.Partner("", "hi!", "");
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("partner", "");
+        java.lang.Class<?> wildcardClass12 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test17163() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17163");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getEmail();
+        partner3.login("partner", "");
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.setVerified(true);
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17164() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17164");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getAccountType();
+        partner3.login("hi!", "partner");
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getID();
+        java.lang.Class<?> wildcardClass15 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass15);
+    }
+
+    @Test
+    public void test17165() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17165");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getPassword();
+        java.lang.String str10 = partner3.getID();
+        partner3.logout();
+        partner3.login("", "partner");
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getID();
+        partner3.logout();
+        boolean boolean18 = partner3.isVerified();
+        partner3.setVerified(true);
+        java.lang.String str21 = partner3.getPassword();
+        java.lang.String str22 = partner3.getPassword();
+        partner3.login("", "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+    }
+
+    @Test
+    public void test17166() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17166");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getPassword();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+    }
+
+    @Test
+    public void test17167() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17167");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        partner3.login("partner", "");
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getPassword();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getEmail();
+        java.lang.String str13 = partner3.getID();
+        boolean boolean14 = partner3.isVerified();
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test17168() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17168");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getID();
+        partner3.login("", "");
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getEmail();
+        partner3.login("partner", "partner");
+        java.lang.String str18 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+    }
+
+    @Test
+    public void test17169() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17169");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "partner");
+        java.lang.String str4 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.setVerified(true);
+        java.lang.String str9 = partner3.getID();
+        partner3.logout();
+        java.lang.String str11 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+    }
+
+    @Test
+    public void test17170() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17170");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        partner3.login("", "partner");
+        boolean boolean18 = partner3.isVerified();
+        java.lang.String str19 = partner3.getAccountType();
+        java.lang.String str20 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+    }
+
+    @Test
+    public void test17171() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17171");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getID();
+        partner3.logout();
+        java.lang.String str15 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17172() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17172");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        boolean boolean12 = partner3.isVerified();
+        java.lang.String str13 = partner3.getAccountType();
+        boolean boolean14 = partner3.isVerified();
+        partner3.setVerified(true);
+        boolean boolean17 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'", boolean17 == true);
+    }
+
+    @Test
+    public void test17173() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17173");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getID();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        double double19 = partner3.getHourlyRate();
+        boolean boolean20 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'", boolean20 == true);
+    }
+
+    @Test
+    public void test17174() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17174");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str16 = partner3.getAccountType();
+        double double17 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17175() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17175");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.login("", "partner");
+        double double9 = partner3.getHourlyRate();
+        partner3.login("hi!", "");
+        java.lang.String str13 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.setVerified(false);
+        java.lang.String str18 = partner3.getEmail();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+    }
+
+    @Test
+    public void test17176() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17176");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.setVerified(false);
+        partner3.login("", "hi!");
+        java.lang.String str17 = partner3.getPassword();
+        java.lang.String str18 = partner3.getPassword();
+        double double19 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+    }
+
+    @Test
+    public void test17177() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17177");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+    }
+
+    @Test
+    public void test17178() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17178");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.setVerified(false);
+        partner3.logout();
+        java.lang.String str16 = partner3.getEmail();
+        java.lang.String str17 = partner3.getEmail();
+        java.lang.String str18 = partner3.getID();
+        java.lang.String str19 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+    }
+
+    @Test
+    public void test17179() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17179");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.login("", "");
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str14 = partner3.getID();
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.login("hi!", "partner");
+        partner3.logout();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+    }
+
+    @Test
+    public void test17180() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17180");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getID();
+        partner3.login("", "");
+        java.lang.String str10 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getAccountType();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getEmail();
+        boolean boolean16 = partner3.isVerified();
+        java.lang.String str17 = partner3.getAccountType();
+        double double18 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+    }
+
+    @Test
+    public void test17181() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17181");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.login("", "");
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean17 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+    }
+
+    @Test
+    public void test17182() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17182");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str17 = partner3.getID();
+        java.lang.String str18 = partner3.getEmail();
+        java.lang.String str19 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+    }
+
+    @Test
+    public void test17183() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17183");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        double double10 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getEmail();
+        partner3.logout();
+        partner3.login("", "partner");
+        java.lang.String str19 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+    }
+
+    @Test
+    public void test17184() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17184");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getEmail();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.login("hi!", "partner");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+    }
+
+    @Test
+    public void test17185() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17185");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getID();
+        partner3.login("", "hi!");
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str16 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17186() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17186");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getPassword();
+        java.lang.String str10 = partner3.getPassword();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17187() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17187");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str9 = partner3.getID();
+        partner3.login("hi!", "");
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getID();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.viewProfile();
+        java.lang.String str17 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17188() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17188");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.login("", "partner");
+        java.lang.String str17 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17189() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17189");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getID();
+        boolean boolean14 = partner3.isVerified();
+        partner3.viewProfile();
+        double double16 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+    }
+
+    @Test
+    public void test17190() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17190");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getID();
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(true);
+        java.lang.String str11 = partner3.getEmail();
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17191() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17191");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getAccountType();
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getEmail();
+        double double12 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+    }
+
+    @Test
+    public void test17192() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17192");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.login("", "");
+        partner3.login("", "partner");
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.login("", "hi!");
+        java.lang.String str17 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17193() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17193");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.login("partner", "partner");
+        java.lang.String str17 = partner3.getEmail();
+        partner3.setVerified(true);
+        double double20 = partner3.getHourlyRate();
+        java.lang.String str21 = partner3.getID();
+        java.lang.String str22 = partner3.getID();
+        java.lang.String str23 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + double20 + "' != '" + 50.0d + "'", double20 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+    }
+
+    @Test
+    public void test17194() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17194");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getEmail();
+        partner3.login("hi!", "");
+        java.lang.String str18 = partner3.getPassword();
+        double double19 = partner3.getHourlyRate();
+        java.lang.String str20 = partner3.getEmail();
+        java.lang.String str21 = partner3.getPassword();
+        java.lang.String str22 = partner3.getAccountType();
+        partner3.setVerified(false);
+        double double25 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "partner" + "'", str22, "partner");
+        org.junit.Assert.assertTrue("'" + double25 + "' != '" + 50.0d + "'", double25 == 50.0d);
+    }
+
+    @Test
+    public void test17195() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17195");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.login("", "");
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getPassword();
+        boolean boolean15 = partner3.isVerified();
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.viewProfile();
+        boolean boolean18 = partner3.isVerified();
+        java.lang.String str19 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+    }
+
+    @Test
+    public void test17196() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17196");
+        model.Partner partner3 = new model.Partner("", "hi!", "partner");
+        java.lang.String str4 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.login("", "hi!");
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getEmail();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.login("", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test17197() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17197");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        java.lang.String str16 = partner3.getAccountType();
+        java.lang.String str17 = partner3.getPassword();
+        partner3.setVerified(false);
+        java.lang.String str20 = partner3.getPassword();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+    }
+
+    @Test
+    public void test17198() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17198");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getEmail();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17199() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17199");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.logout();
+        partner3.setVerified(false);
+        double double16 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        double double19 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+    }
+
+    @Test
+    public void test17200() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17200");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getEmail();
+        partner3.setVerified(false);
+        partner3.login("partner", "hi!");
+        java.lang.String str12 = partner3.getPassword();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getPassword();
+        boolean boolean17 = partner3.isVerified();
+        double double18 = partner3.getHourlyRate();
+        boolean boolean19 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test17201() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17201");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getAccountType();
+        double double12 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.login("", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+    }
+
+    @Test
+    public void test17202() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17202");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        java.lang.Class<?> wildcardClass10 = partner3.getClass();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertNotNull(wildcardClass10);
+    }
+
+    @Test
+    public void test17203() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17203");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        double double10 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        partner3.login("hi!", "hi!");
+        java.lang.String str16 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17204() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17204");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("", "");
+        boolean boolean12 = partner3.isVerified();
+        boolean boolean13 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.viewProfile();
+        boolean boolean17 = partner3.isVerified();
+        partner3.logout();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+    }
+
+    @Test
+    public void test17205() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17205");
+        model.Partner partner3 = new model.Partner("", "", "partner");
+        partner3.login("partner", "partner");
+        java.lang.String str7 = partner3.getPassword();
+        partner3.login("hi!", "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+    }
+
+    @Test
+    public void test17206() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17206");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str11 = partner3.getEmail();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.login("partner", "hi!");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17207() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17207");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getEmail();
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getEmail();
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getID();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17208() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17208");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean10 = partner3.isVerified();
+        partner3.login("", "hi!");
+        partner3.viewProfile();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str17 = partner3.getID();
+        java.lang.String str18 = partner3.getEmail();
+        java.lang.String str19 = partner3.getID();
+        java.lang.String str20 = partner3.getID();
+        partner3.logout();
+        double double22 = partner3.getHourlyRate();
+        boolean boolean23 = partner3.isVerified();
+        partner3.login("", "");
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "hi!" + "'", str20, "hi!");
+        org.junit.Assert.assertTrue("'" + double22 + "' != '" + 50.0d + "'", double22 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + false + "'", boolean23 == false);
+    }
+
+    @Test
+    public void test17209() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17209");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str14 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+    }
+
+    @Test
+    public void test17210() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17210");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+    }
+
+    @Test
+    public void test17211() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17211");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+    }
+
+    @Test
+    public void test17212() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17212");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean8 = partner3.isVerified();
+        partner3.logout();
+        double double10 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getPassword();
+        boolean boolean15 = partner3.isVerified();
+        double double16 = partner3.getHourlyRate();
+        java.lang.Class<?> wildcardClass17 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test17213() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17213");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.setVerified(true);
+        partner3.login("partner", "");
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.login("partner", "partner");
+        java.lang.String str16 = partner3.getID();
+        java.lang.String str17 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+    }
+
+    @Test
+    public void test17214() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17214");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getAccountType();
+        boolean boolean12 = partner3.isVerified();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str15 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+    }
+
+    @Test
+    public void test17215() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17215");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getEmail();
+        partner3.setVerified(false);
+        partner3.login("partner", "hi!");
+        java.lang.String str12 = partner3.getPassword();
+        partner3.setVerified(false);
+        boolean boolean15 = partner3.isVerified();
+        java.lang.String str16 = partner3.getID();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str19 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17216() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17216");
+        model.Partner partner3 = new model.Partner("hi!", "", "partner");
+        java.lang.String str4 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        java.lang.String str8 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "" + "'", str4, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+    }
+
+    @Test
+    public void test17217() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17217");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getID();
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(true);
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        partner3.login("hi!", "hi!");
+        java.lang.String str17 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17218() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17218");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.login("", "");
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17219() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17219");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getID();
+        partner3.setVerified(false);
+        double double15 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+    }
+
+    @Test
+    public void test17220() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17220");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        boolean boolean9 = partner3.isVerified();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getPassword();
+        java.lang.String str12 = partner3.getID();
+        boolean boolean13 = partner3.isVerified();
+        partner3.login("partner", "hi!");
+        java.lang.String str17 = partner3.getID();
+        java.lang.String str18 = partner3.getAccountType();
+        java.lang.String str19 = partner3.getAccountType();
+        java.lang.String str20 = partner3.getID();
+        java.lang.String str21 = partner3.getEmail();
+        java.lang.String str22 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "hi!" + "'", str20, "hi!");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+    }
+
+    @Test
+    public void test17221() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17221");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str9 = partner3.getID();
+        partner3.login("hi!", "");
+        partner3.viewProfile();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17222() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17222");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getID();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getEmail();
+        java.lang.String str15 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17223() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17223");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.login("hi!", "hi!");
+        double double18 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+    }
+
+    @Test
+    public void test17224() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17224");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        java.lang.String str10 = partner3.getAccountType();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17225() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17225");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.setVerified(true);
+        partner3.logout();
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17226() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17226");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("", "hi!");
+        double double12 = partner3.getHourlyRate();
+        double double13 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+    }
+
+    @Test
+    public void test17227() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17227");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        partner3.viewProfile();
+        partner3.login("", "partner");
+        partner3.login("", "partner");
+        java.lang.String str15 = partner3.getEmail();
+        double double16 = partner3.getHourlyRate();
+        java.lang.String str17 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str19 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17228() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17228");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        boolean boolean8 = partner3.isVerified();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getAccountType();
+        double double11 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        double double14 = partner3.getHourlyRate();
+        boolean boolean15 = partner3.isVerified();
+        boolean boolean16 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.login("", "hi!");
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+    }
+
+    @Test
+    public void test17229() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17229");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.setVerified(true);
+        boolean boolean9 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + true + "'", boolean9 == true);
+    }
+
+    @Test
+    public void test17230() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17230");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getID();
+        partner3.login("", "");
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getEmail();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17231() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17231");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.logout();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getID();
+        partner3.logout();
+        java.lang.String str17 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str20 = partner3.getEmail();
+        java.lang.String str21 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+    }
+
+    @Test
+    public void test17232() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17232");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.login("partner", "hi!");
+        partner3.setVerified(true);
+        partner3.logout();
+        partner3.login("partner", "partner");
+        java.lang.String str24 = partner3.getAccountType();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "partner" + "'", str24, "partner");
+    }
+
+    @Test
+    public void test17233() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17233");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.setVerified(true);
+        partner3.login("hi!", "hi!");
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'", boolean11 == true);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+    }
+
+    @Test
+    public void test17234() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17234");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getEmail();
+        double double13 = partner3.getHourlyRate();
+        boolean boolean14 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.login("partner", "hi!");
+        java.lang.String str19 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+    }
+
+    @Test
+    public void test17235() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17235");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.login("hi!", "");
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        double double14 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        java.lang.String str17 = partner3.getID();
+        java.lang.Class<?> wildcardClass18 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertNotNull(wildcardClass18);
+    }
+
+    @Test
+    public void test17236() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17236");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.login("partner", "hi!");
+        partner3.login("", "partner");
+        partner3.login("hi!", "partner");
+        java.lang.String str26 = partner3.getEmail();
+        java.lang.String str27 = partner3.getID();
+        java.lang.String str28 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str26 + "' != '" + "" + "'", str26, "");
+        org.junit.Assert.assertEquals("'" + str27 + "' != '" + "hi!" + "'", str27, "hi!");
+        org.junit.Assert.assertEquals("'" + str28 + "' != '" + "partner" + "'", str28, "partner");
+    }
+
+    @Test
+    public void test17237() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17237");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        java.lang.Class<?> wildcardClass15 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertNotNull(wildcardClass15);
+    }
+
+    @Test
+    public void test17238() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17238");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        double double8 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        double double15 = partner3.getHourlyRate();
+        java.lang.Class<?> wildcardClass16 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass16);
+    }
+
+    @Test
+    public void test17239() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17239");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        double double12 = partner3.getHourlyRate();
+        double double13 = partner3.getHourlyRate();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getAccountType();
+        double double17 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17240() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17240");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        double double13 = partner3.getHourlyRate();
+        double double14 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.login("partner", "");
+        java.lang.String str19 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17241() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17241");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.login("hi!", "");
+        java.lang.String str18 = partner3.getPassword();
+        partner3.logout();
+        boolean boolean20 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + false + "'", boolean20 == false);
+    }
+
+    @Test
+    public void test17242() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17242");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        boolean boolean10 = partner3.isVerified();
+        boolean boolean11 = partner3.isVerified();
+        boolean boolean12 = partner3.isVerified();
+        java.lang.String str13 = partner3.getPassword();
+        partner3.logout();
+        partner3.login("", "partner");
+        java.lang.String str18 = partner3.getPassword();
+        double double19 = partner3.getHourlyRate();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+    }
+
+    @Test
+    public void test17243() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17243");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean10 = partner3.isVerified();
+        partner3.login("", "hi!");
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.login("", "partner");
+        partner3.setVerified(false);
+        java.lang.String str21 = partner3.getID();
+        partner3.login("partner", "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+    }
+
+    @Test
+    public void test17244() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17244");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.logout();
+        partner3.login("", "partner");
+        java.lang.String str10 = partner3.getPassword();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.login("partner", "partner");
+        partner3.logout();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+    }
+
+    @Test
+    public void test17245() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17245");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getEmail();
+        boolean boolean14 = partner3.isVerified();
+        double double15 = partner3.getHourlyRate();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+    }
+
+    @Test
+    public void test17246() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17246");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.login("", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17247() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17247");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str17 = partner3.getAccountType();
+        java.lang.String str18 = partner3.getEmail();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test17248() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17248");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getID();
+        partner3.login("", "");
+        java.lang.String str12 = partner3.getID();
+        partner3.login("", "hi!");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+    }
+
+    @Test
+    public void test17249() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17249");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getEmail();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.login("hi!", "partner");
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        boolean boolean16 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test17250() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17250");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        double double12 = partner3.getHourlyRate();
+        double double13 = partner3.getHourlyRate();
+        double double14 = partner3.getHourlyRate();
+        partner3.login("", "");
+        java.lang.String str18 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test17251() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17251");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getEmail();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        java.lang.String str16 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17252() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17252");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        double double10 = partner3.getHourlyRate();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.viewProfile();
+        java.lang.String str15 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17253() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17253");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getEmail();
+        java.lang.String str20 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "hi!" + "'", str20, "hi!");
+    }
+
+    @Test
+    public void test17254() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17254");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getID();
+        partner3.login("partner", "partner");
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.String str16 = partner3.getAccountType();
+        double double17 = partner3.getHourlyRate();
+        java.lang.String str18 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test17255() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17255");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        double double14 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        java.lang.String str16 = partner3.getEmail();
+        java.lang.String str17 = partner3.getAccountType();
+        boolean boolean18 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str20 = partner3.getPassword();
+        java.lang.String str21 = partner3.getAccountType();
+        java.lang.String str22 = partner3.getAccountType();
+        partner3.login("hi!", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "partner" + "'", str21, "partner");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "partner" + "'", str22, "partner");
+    }
+
+    @Test
+    public void test17256() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17256");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.viewProfile();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getAccountType();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getID();
+        partner3.login("partner", "partner");
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17257() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17257");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+    }
+
+    @Test
+    public void test17258() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17258");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str9 = partner3.getID();
+        partner3.login("hi!", "");
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.login("", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17259() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17259");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        boolean boolean6 = partner3.isVerified();
+        java.lang.String str7 = partner3.getEmail();
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+    }
+
+    @Test
+    public void test17260() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17260");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getID();
+        partner3.login("", "");
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getEmail();
+        partner3.logout();
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17261() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17261");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getID();
+        partner3.login("", "partner");
+        java.lang.String str15 = partner3.getEmail();
+        boolean boolean16 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str18 = partner3.getPassword();
+        java.lang.String str19 = partner3.getAccountType();
+        partner3.logout();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17262() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17262");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.String str16 = partner3.getID();
+        partner3.viewProfile();
+        partner3.login("", "");
+        partner3.login("partner", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17263() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17263");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        boolean boolean12 = partner3.isVerified();
+        java.lang.String str13 = partner3.getPassword();
+        partner3.viewProfile();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17264() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17264");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.logout();
+        partner3.setVerified(false);
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17265() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17265");
+        model.Partner partner3 = new model.Partner("", "partner", "partner");
+        double double4 = partner3.getHourlyRate();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getPassword();
+        partner3.setVerified(false);
+        boolean boolean10 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.viewProfile();
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 50.0d + "'", double4 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+    }
+
+    @Test
+    public void test17266() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17266");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getPassword();
+        double double13 = partner3.getHourlyRate();
+        java.lang.String str14 = partner3.getPassword();
+        boolean boolean15 = partner3.isVerified();
+        double double16 = partner3.getHourlyRate();
+        boolean boolean17 = partner3.isVerified();
+        boolean boolean18 = partner3.isVerified();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test17267() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17267");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getEmail();
+        partner3.login("", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+    }
+
+    @Test
+    public void test17268() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17268");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+    }
+
+    @Test
+    public void test17269() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17269");
+        model.Partner partner3 = new model.Partner("partner", "hi!", "");
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.login("", "");
+        partner3.login("hi!", "hi!");
+        java.lang.String str15 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+    }
+
+    @Test
+    public void test17270() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17270");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getPassword();
+        java.lang.String str10 = partner3.getPassword();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17271() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17271");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getPassword();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+    }
+
+    @Test
+    public void test17272() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17272");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("partner", "hi!");
+        partner3.login("hi!", "");
+        partner3.login("partner", "");
+        java.lang.String str18 = partner3.getID();
+        java.lang.String str19 = partner3.getAccountType();
+        java.lang.String str20 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+    }
+
+    @Test
+    public void test17273() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17273");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getID();
+        partner3.login("", "");
+        double double13 = partner3.getHourlyRate();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+    }
+
+    @Test
+    public void test17274() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17274");
+        model.Partner partner3 = new model.Partner("", "hi!", "hi!");
+        partner3.login("partner", "partner");
+        partner3.login("partner", "hi!");
+        boolean boolean10 = partner3.isVerified();
+        java.lang.Class<?> wildcardClass11 = partner3.getClass();
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertNotNull(wildcardClass11);
+    }
+
+    @Test
+    public void test17275() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17275");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str18 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+    }
+
+    @Test
+    public void test17276() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17276");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "partner");
+        partner3.login("hi!", "partner");
+        partner3.login("", "partner");
+        java.lang.String str10 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        partner3.login("partner", "partner");
+        java.lang.String str17 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+    }
+
+    @Test
+    public void test17277() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17277");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getAccountType();
+        double double12 = partner3.getHourlyRate();
+        double double13 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        double double16 = partner3.getHourlyRate();
+        java.lang.String str17 = partner3.getAccountType();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17278() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17278");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str13 = partner3.getID();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str17 = partner3.getPassword();
+        java.lang.String str18 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        double double22 = partner3.getHourlyRate();
+        java.lang.String str23 = partner3.getPassword();
+        java.lang.String str24 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + double22 + "' != '" + 50.0d + "'", double22 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+    }
+
+    @Test
+    public void test17279() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17279");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("", "");
+        boolean boolean12 = partner3.isVerified();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getPassword();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.setVerified(true);
+        java.lang.String str19 = partner3.getAccountType();
+        partner3.viewProfile();
+        boolean boolean21 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + true + "'", boolean21 == true);
+    }
+
+    @Test
+    public void test17280() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17280");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        boolean boolean8 = partner3.isVerified();
+        boolean boolean9 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+    }
+
+    @Test
+    public void test17281() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17281");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getEmail();
+        java.lang.String str5 = partner3.getPassword();
+        java.lang.String str6 = partner3.getEmail();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+    }
+
+    @Test
+    public void test17282() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17282");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        boolean boolean8 = partner3.isVerified();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getAccountType();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getEmail();
+        double double14 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17283() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17283");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.login("hi!", "partner");
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17284() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17284");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+    }
+
+    @Test
+    public void test17285() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17285");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+    }
+
+    @Test
+    public void test17286() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17286");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getID();
+        partner3.login("", "");
+        java.lang.String str13 = partner3.getPassword();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+    }
+
+    @Test
+    public void test17287() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17287");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "partner");
+        partner3.login("hi!", "partner");
+        java.lang.String str7 = partner3.getEmail();
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+    }
+
+    @Test
+    public void test17288() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17288");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        partner3.logout();
+        partner3.logout();
+        partner3.logout();
+        double double7 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getPassword();
+        double double11 = partner3.getHourlyRate();
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getPassword();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+    }
+
+    @Test
+    public void test17289() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17289");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getPassword();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("partner", "");
+        java.lang.Class<?> wildcardClass12 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test17290() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17290");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.setVerified(true);
+        java.lang.String str18 = partner3.getAccountType();
+        java.lang.String str19 = partner3.getPassword();
+        java.lang.String str20 = partner3.getEmail();
+        double double21 = partner3.getHourlyRate();
+        java.lang.String str22 = partner3.getPassword();
+        java.lang.String str23 = partner3.getAccountType();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertTrue("'" + double21 + "' != '" + 50.0d + "'", double21 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "partner" + "'", str23, "partner");
+    }
+
+    @Test
+    public void test17291() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17291");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("hi!", "partner");
+        boolean boolean12 = partner3.isVerified();
+        partner3.login("hi!", "");
+        java.lang.String str16 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17292() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17292");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.login("", "");
+        java.lang.String str9 = partner3.getEmail();
+        java.lang.String str10 = partner3.getEmail();
+        boolean boolean11 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str13 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+    }
+
+    @Test
+    public void test17293() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17293");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.logout();
+        java.lang.String str14 = partner3.getID();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+    }
+
+    @Test
+    public void test17294() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17294");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getAccountType();
+        partner3.login("hi!", "");
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+    }
+
+    @Test
+    public void test17295() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17295");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.login("partner", "partner");
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.viewProfile();
+        boolean boolean14 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+    }
+
+    @Test
+    public void test17296() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17296");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        java.lang.String str19 = partner3.getAccountType();
+        java.lang.String str20 = partner3.getEmail();
+        java.lang.String str21 = partner3.getPassword();
+        java.lang.String str22 = partner3.getID();
+        java.lang.String str23 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+    }
+
+    @Test
+    public void test17297() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17297");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getID();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+    }
+
+    @Test
+    public void test17298() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17298");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        double double7 = partner3.getHourlyRate();
+        partner3.logout();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getEmail();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+    }
+
+    @Test
+    public void test17299() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17299");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str13 = partner3.getID();
+        double double14 = partner3.getHourlyRate();
+        partner3.logout();
+        double double16 = partner3.getHourlyRate();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+    }
+
+    @Test
+    public void test17300() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17300");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.login("", "");
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        double double15 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+    }
+
+    @Test
+    public void test17301() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17301");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.login("", "");
+        java.lang.String str16 = partner3.getID();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        boolean boolean19 = partner3.isVerified();
+        partner3.login("partner", "partner");
+        java.lang.Class<?> wildcardClass23 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + true + "'", boolean19 == true);
+        org.junit.Assert.assertNotNull(wildcardClass23);
+    }
+
+    @Test
+    public void test17302() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17302");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        partner3.setVerified(true);
+        partner3.login("", "hi!");
+        partner3.viewProfile();
+        partner3.login("", "hi!");
+        double double13 = partner3.getHourlyRate();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getEmail();
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17303() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17303");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        double double8 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.Class<?> wildcardClass15 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertNotNull(wildcardClass15);
+    }
+
+    @Test
+    public void test17304() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17304");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.viewProfile();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getAccountType();
+        java.lang.String str16 = partner3.getID();
+        java.lang.String str17 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+    }
+
+    @Test
+    public void test17305() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17305");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        boolean boolean8 = partner3.isVerified();
+        double double9 = partner3.getHourlyRate();
+        java.lang.String str10 = partner3.getPassword();
+        java.lang.String str11 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+    }
+
+    @Test
+    public void test17306() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17306");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        partner3.setVerified(true);
+        partner3.login("", "hi!");
+        partner3.setVerified(true);
+        partner3.setVerified(false);
+        partner3.setVerified(true);
+        java.lang.String str15 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str17 = partner3.getPassword();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17307() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17307");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getPassword();
+        partner3.login("hi!", "partner");
+        boolean boolean11 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+    }
+
+    @Test
+    public void test17308() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17308");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.login("hi!", "");
+        java.lang.String str11 = partner3.getPassword();
+        boolean boolean12 = partner3.isVerified();
+        partner3.setVerified(true);
+        double double15 = partner3.getHourlyRate();
+        boolean boolean16 = partner3.isVerified();
+        java.lang.String str17 = partner3.getAccountType();
+        java.lang.String str18 = partner3.getPassword();
+        partner3.login("", "hi!");
+        boolean boolean22 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + true + "'", boolean22 == true);
+    }
+
+    @Test
+    public void test17309() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17309");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        partner3.login("", "");
+        java.lang.String str14 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17310() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17310");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        double double8 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+    }
+
+    @Test
+    public void test17311() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17311");
+        model.Partner partner3 = new model.Partner("", "", "");
+        partner3.viewProfile();
+        java.lang.String str5 = partner3.getEmail();
+        java.lang.String str6 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        boolean boolean10 = partner3.isVerified();
+        partner3.login("", "hi!");
+        partner3.login("hi!", "");
+        partner3.login("", "");
+        java.lang.String str20 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+    }
+
+    @Test
+    public void test17312() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17312");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.login("", "hi!");
+        partner3.setVerified(true);
+        partner3.login("", "hi!");
+        java.lang.String str23 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+    }
+
+    @Test
+    public void test17313() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17313");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        partner3.viewProfile();
+        partner3.login("", "partner");
+        partner3.setVerified(false);
+        double double13 = partner3.getHourlyRate();
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+    }
+
+    @Test
+    public void test17314() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17314");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getID();
+        partner3.login("hi!", "partner");
+        java.lang.String str12 = partner3.getPassword();
+        boolean boolean13 = partner3.isVerified();
+        partner3.viewProfile();
+        double double15 = partner3.getHourlyRate();
+        partner3.login("partner", "");
+        java.lang.String str19 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+    }
+
+    @Test
+    public void test17315() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17315");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.viewProfile();
+        boolean boolean16 = partner3.isVerified();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test17316() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17316");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        partner3.logout();
+        double double11 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getID();
+        java.lang.String str17 = partner3.getEmail();
+        java.lang.String str18 = partner3.getEmail();
+        boolean boolean19 = partner3.isVerified();
+        double double20 = partner3.getHourlyRate();
+        java.lang.String str21 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + double20 + "' != '" + 50.0d + "'", double20 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+    }
+
+    @Test
+    public void test17317() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17317");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.logout();
+        boolean boolean14 = partner3.isVerified();
+        boolean boolean15 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+    }
+
+    @Test
+    public void test17318() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17318");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        double double11 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        java.lang.Class<?> wildcardClass14 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test17319() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17319");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str17 = partner3.getEmail();
+        java.lang.String str18 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str22 = partner3.getEmail();
+        partner3.login("", "");
+        partner3.login("hi!", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+    }
+
+    @Test
+    public void test17320() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17320");
+        model.Partner partner3 = new model.Partner("", "partner", "partner");
+        partner3.setVerified(true);
+        partner3.logout();
+        partner3.logout();
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(true);
+        partner3.login("", "hi!");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + true + "'", boolean8 == true);
+    }
+
+    @Test
+    public void test17321() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17321");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getID();
+        partner3.login("", "partner");
+        java.lang.String str15 = partner3.getEmail();
+        boolean boolean16 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.login("partner", "partner");
+        partner3.setVerified(true);
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test17322() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17322");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.login("", "hi!");
+        java.lang.String str11 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.setVerified(true);
+        java.lang.String str16 = partner3.getEmail();
+        partner3.viewProfile();
+        double double18 = partner3.getHourlyRate();
+        double double19 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+    }
+
+    @Test
+    public void test17323() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17323");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        double double6 = partner3.getHourlyRate();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getPassword();
+        java.lang.String str10 = partner3.getAccountType();
+        boolean boolean11 = partner3.isVerified();
+        partner3.login("partner", "partner");
+        double double15 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+    }
+
+    @Test
+    public void test17324() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17324");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getEmail();
+        java.lang.String str10 = partner3.getAccountType();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getPassword();
+        double double15 = partner3.getHourlyRate();
+        boolean boolean16 = partner3.isVerified();
+        double double17 = partner3.getHourlyRate();
+        boolean boolean18 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + true + "'", boolean18 == true);
+    }
+
+    @Test
+    public void test17325() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17325");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.setVerified(true);
+        partner3.logout();
+        java.lang.String str16 = partner3.getID();
+        boolean boolean17 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.login("partner", "hi!");
+        double double23 = partner3.getHourlyRate();
+        partner3.logout();
+        java.lang.String str25 = partner3.getAccountType();
+        boolean boolean26 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'", boolean17 == true);
+        org.junit.Assert.assertTrue("'" + double23 + "' != '" + 50.0d + "'", double23 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "partner" + "'", str25, "partner");
+        org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + false + "'", boolean26 == false);
+    }
+
+    @Test
+    public void test17326() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17326");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        double double8 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double13 = partner3.getHourlyRate();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.viewProfile();
+        boolean boolean16 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test17327() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17327");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.setVerified(false);
+        partner3.login("", "hi!");
+        java.lang.String str17 = partner3.getPassword();
+        double double18 = partner3.getHourlyRate();
+        boolean boolean19 = partner3.isVerified();
+        double double20 = partner3.getHourlyRate();
+        java.lang.Class<?> wildcardClass21 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+        org.junit.Assert.assertTrue("'" + double20 + "' != '" + 50.0d + "'", double20 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass21);
+    }
+
+    @Test
+    public void test17328() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17328");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str12 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.String str16 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17329() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17329");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getID();
+        partner3.login("partner", "hi!");
+        double double13 = partner3.getHourlyRate();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+    }
+
+    @Test
+    public void test17330() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17330");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.login("", "");
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.setVerified(false);
+    }
+
+    @Test
+    public void test17331() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17331");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        boolean boolean10 = partner3.isVerified();
+        partner3.viewProfile();
+        double double12 = partner3.getHourlyRate();
+        partner3.logout();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str17 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17332() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17332");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getEmail();
+        boolean boolean11 = partner3.isVerified();
+        boolean boolean12 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+    }
+
+    @Test
+    public void test17333() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17333");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+    }
+
+    @Test
+    public void test17334() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17334");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        boolean boolean8 = partner3.isVerified();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+    }
+
+    @Test
+    public void test17335() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17335");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getPassword();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str16 = partner3.getEmail();
+        java.lang.String str17 = partner3.getEmail();
+        partner3.setVerified(false);
+        java.lang.String str20 = partner3.getAccountType();
+        java.lang.String str21 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+    }
+
+    @Test
+    public void test17336() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17336");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getID();
+        partner3.logout();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+    }
+
+    @Test
+    public void test17337() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17337");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getPassword();
+        partner3.logout();
+        boolean boolean15 = partner3.isVerified();
+        double double16 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+    }
+
+    @Test
+    public void test17338() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17338");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        boolean boolean6 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        double double13 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+    }
+
+    @Test
+    public void test17339() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17339");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getEmail();
+        partner3.setVerified(false);
+        partner3.login("hi!", "");
+        java.lang.String str15 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17340() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17340");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.login("partner", "partner");
+        double double11 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(false);
+        boolean boolean18 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test17341() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17341");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        double double10 = partner3.getHourlyRate();
+        boolean boolean11 = partner3.isVerified();
+        double double12 = partner3.getHourlyRate();
+        partner3.login("partner", "");
+        java.lang.String str16 = partner3.getPassword();
+        java.lang.String str17 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+    }
+
+    @Test
+    public void test17342() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17342");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+    }
+
+    @Test
+    public void test17343() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17343");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getID();
+        partner3.logout();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getID();
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getAccountType();
+        java.lang.String str17 = partner3.getAccountType();
+        java.lang.String str18 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+    }
+
+    @Test
+    public void test17344() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17344");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        double double13 = partner3.getHourlyRate();
+        boolean boolean14 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str16 = partner3.getID();
+        java.lang.String str17 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass20 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertNotNull(wildcardClass20);
+    }
+
+    @Test
+    public void test17345() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17345");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        boolean boolean13 = partner3.isVerified();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getAccountType();
+        java.lang.String str16 = partner3.getEmail();
+        partner3.logout();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17346() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17346");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getEmail();
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.login("", "");
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test17347() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17347");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        partner3.logout();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.setVerified(false);
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+    }
+
+    @Test
+    public void test17348() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17348");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        boolean boolean16 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test17349() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17349");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getID();
+        boolean boolean12 = partner3.isVerified();
+        partner3.login("", "");
+        java.lang.String str16 = partner3.getPassword();
+        boolean boolean17 = partner3.isVerified();
+        boolean boolean18 = partner3.isVerified();
+        partner3.setVerified(false);
+        boolean boolean21 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + boolean21 + "' != '" + false + "'", boolean21 == false);
+    }
+
+    @Test
+    public void test17350() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17350");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getID();
+        java.lang.Class<?> wildcardClass11 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass11);
+    }
+
+    @Test
+    public void test17351() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17351");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+    }
+
+    @Test
+    public void test17352() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17352");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getEmail();
+        partner3.login("hi!", "");
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getEmail();
+        partner3.setVerified(false);
+        double double22 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        boolean boolean25 = partner3.isVerified();
+        partner3.login("hi!", "hi!");
+        boolean boolean29 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertTrue("'" + double22 + "' != '" + 50.0d + "'", double22 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean25 + "' != '" + true + "'", boolean25 == true);
+        org.junit.Assert.assertTrue("'" + boolean29 + "' != '" + true + "'", boolean29 == true);
+    }
+
+    @Test
+    public void test17353() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17353");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str16 = partner3.getAccountType();
+        java.lang.String str17 = partner3.getID();
+        java.lang.String str18 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test17354() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17354");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getEmail();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17355() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17355");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.setVerified(true);
+        partner3.logout();
+        boolean boolean13 = partner3.isVerified();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + true + "'", boolean13 == true);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+    }
+
+    @Test
+    public void test17356() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17356");
+        model.Partner partner3 = new model.Partner("", "partner", "partner");
+        partner3.viewProfile();
+        partner3.viewProfile();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.logout();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+    }
+
+    @Test
+    public void test17357() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17357");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.login("", "");
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+    }
+
+    @Test
+    public void test17358() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17358");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        boolean boolean8 = partner3.isVerified();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        double double12 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.login("partner", "hi!");
+        java.lang.String str19 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17359() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17359");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.logout();
+        partner3.viewProfile();
+        boolean boolean14 = partner3.isVerified();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getID();
+        java.lang.Class<?> wildcardClass17 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test17360() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17360");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        partner3.login("partner", "");
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.login("hi!", "");
+        java.lang.String str12 = partner3.getEmail();
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.logout();
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17361() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17361");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+    }
+
+    @Test
+    public void test17362() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17362");
+        model.Partner partner3 = new model.Partner("", "", "partner");
+        partner3.login("partner", "partner");
+        double double7 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+    }
+
+    @Test
+    public void test17363() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17363");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        double double13 = partner3.getHourlyRate();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getPassword();
+        boolean boolean16 = partner3.isVerified();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test17364() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17364");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getEmail();
+        double double9 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+    }
+
+    @Test
+    public void test17365() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17365");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("partner", "partner");
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        java.lang.Class<?> wildcardClass18 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertNotNull(wildcardClass18);
+    }
+
+    @Test
+    public void test17366() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17366");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getEmail();
+        boolean boolean6 = partner3.isVerified();
+        boolean boolean7 = partner3.isVerified();
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+    }
+
+    @Test
+    public void test17367() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17367");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean10 = partner3.isVerified();
+        partner3.login("", "hi!");
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.viewProfile();
+        double double17 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        boolean boolean19 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test17368() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17368");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getAccountType();
+        partner3.setVerified(true);
+        partner3.login("hi!", "hi!");
+        java.lang.String str16 = partner3.getPassword();
+        double double17 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17369() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17369");
+        model.Partner partner3 = new model.Partner("hi!", "", "partner");
+        java.lang.String str4 = partner3.getPassword();
+        double double5 = partner3.getHourlyRate();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.Class<?> wildcardClass7 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "" + "'", str4, "");
+        org.junit.Assert.assertTrue("'" + double5 + "' != '" + 50.0d + "'", double5 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertNotNull(wildcardClass7);
+    }
+
+    @Test
+    public void test17370() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17370");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getID();
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test17371() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17371");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.setVerified(true);
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.login("hi!", "hi!");
+        java.lang.String str20 = partner3.getAccountType();
+        java.lang.Class<?> wildcardClass21 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+        org.junit.Assert.assertNotNull(wildcardClass21);
+    }
+
+    @Test
+    public void test17372() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17372");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.login("", "partner");
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getID();
+        partner3.login("partner", "");
+        double double20 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.Class<?> wildcardClass23 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertTrue("'" + double20 + "' != '" + 50.0d + "'", double20 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass23);
+    }
+
+    @Test
+    public void test17373() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17373");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.viewProfile();
+        boolean boolean10 = partner3.isVerified();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+    }
+
+    @Test
+    public void test17374() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17374");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.login("hi!", "partner");
+        partner3.viewProfile();
+        double double17 = partner3.getHourlyRate();
+        java.lang.String str18 = partner3.getPassword();
+        partner3.login("hi!", "");
+        java.lang.String str22 = partner3.getAccountType();
+        java.lang.String str23 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "partner" + "'", str22, "partner");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "hi!" + "'", str23, "hi!");
+    }
+
+    @Test
+    public void test17375() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17375");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getAccountType();
+        double double12 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getEmail();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getPassword();
+        java.lang.String str17 = partner3.getAccountType();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17376() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17376");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        partner3.login("", "partner");
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str17 = partner3.getEmail();
+        boolean boolean18 = partner3.isVerified();
+        partner3.login("hi!", "");
+        double double22 = partner3.getHourlyRate();
+        java.lang.String str23 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + double22 + "' != '" + 50.0d + "'", double22 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+    }
+
+    @Test
+    public void test17377() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17377");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getPassword();
+        double double11 = partner3.getHourlyRate();
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        boolean boolean17 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + true + "'", boolean17 == true);
+    }
+
+    @Test
+    public void test17378() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17378");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getID();
+        partner3.setVerified(false);
+        double double13 = partner3.getHourlyRate();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17379() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17379");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+    }
+
+    @Test
+    public void test17380() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17380");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getPassword();
+        boolean boolean10 = partner3.isVerified();
+        partner3.login("hi!", "partner");
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17381() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17381");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getID();
+        partner3.login("hi!", "partner");
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        double double15 = partner3.getHourlyRate();
+        double double16 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+    }
+
+    @Test
+    public void test17382() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17382");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.login("", "");
+        double double15 = partner3.getHourlyRate();
+        boolean boolean16 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str18 = partner3.getPassword();
+        partner3.setVerified(false);
+        double double21 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + true + "'", boolean16 == true);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertTrue("'" + double21 + "' != '" + 50.0d + "'", double21 == 50.0d);
+    }
+
+    @Test
+    public void test17383() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17383");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str17 = partner3.getPassword();
+        partner3.login("hi!", "");
+        java.lang.String str21 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str23 = partner3.getID();
+        partner3.login("", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "hi!" + "'", str23, "hi!");
+    }
+
+    @Test
+    public void test17384() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17384");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getID();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        double double19 = partner3.getHourlyRate();
+        java.lang.String str20 = partner3.getAccountType();
+        java.lang.String str21 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "partner" + "'", str21, "partner");
+    }
+
+    @Test
+    public void test17385() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17385");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.viewProfile();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getID();
+        boolean boolean15 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+    }
+
+    @Test
+    public void test17386() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17386");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        partner3.logout();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17387() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17387");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(false);
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getPassword();
+        double double15 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+    }
+
+    @Test
+    public void test17388() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17388");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(true);
+        double double10 = partner3.getHourlyRate();
+        boolean boolean11 = partner3.isVerified();
+        partner3.login("hi!", "hi!");
+        boolean boolean15 = partner3.isVerified();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'", boolean11 == true);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
+    }
+
+    @Test
+    public void test17389() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17389");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        partner3.login("partner", "hi!");
+        java.lang.String str18 = partner3.getID();
+        double double19 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+    }
+
+    @Test
+    public void test17390() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17390");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17391() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17391");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getPassword();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.login("hi!", "partner");
+        java.lang.String str20 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+    }
+
+    @Test
+    public void test17392() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17392");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getID();
+        partner3.setVerified(false);
+        double double18 = partner3.getHourlyRate();
+        double double19 = partner3.getHourlyRate();
+        java.lang.String str20 = partner3.getPassword();
+        java.lang.String str21 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "partner" + "'", str21, "partner");
+    }
+
+    @Test
+    public void test17393() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17393");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        boolean boolean6 = partner3.isVerified();
+        partner3.login("", "partner");
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getEmail();
+        java.lang.String str12 = partner3.getEmail();
+        boolean boolean13 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str15 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17394() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17394");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        double double4 = partner3.getHourlyRate();
+        boolean boolean5 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 50.0d + "'", double4 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+    }
+
+    @Test
+    public void test17395() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17395");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.login("", "");
+        java.lang.String str15 = partner3.getEmail();
+        double double16 = partner3.getHourlyRate();
+        java.lang.String str17 = partner3.getAccountType();
+        java.lang.String str18 = partner3.getID();
+        boolean boolean19 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean19 + "' != '" + false + "'", boolean19 == false);
+    }
+
+    @Test
+    public void test17396() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17396");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getEmail();
+        boolean boolean6 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+    }
+
+    @Test
+    public void test17397() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17397");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.login("partner", "");
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+    }
+
+    @Test
+    public void test17398() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17398");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getID();
+        partner3.logout();
+        java.lang.String str11 = partner3.getID();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getEmail();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.login("partner", "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17399() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17399");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        java.lang.String str10 = partner3.getPassword();
+        java.lang.String str11 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+    }
+
+    @Test
+    public void test17400() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17400");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        partner3.login("", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+    }
+
+    @Test
+    public void test17401() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17401");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getEmail();
+        java.lang.String str9 = partner3.getAccountType();
+        partner3.login("partner", "partner");
+        partner3.login("hi!", "hi!");
+        boolean boolean16 = partner3.isVerified();
+        boolean boolean17 = partner3.isVerified();
+        java.lang.String str18 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+    }
+
+    @Test
+    public void test17402() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17402");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        double double4 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 50.0d + "'", double4 == 50.0d);
+    }
+
+    @Test
+    public void test17403() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17403");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getID();
+        boolean boolean10 = partner3.isVerified();
+        partner3.setVerified(false);
+        double double13 = partner3.getHourlyRate();
+        double double14 = partner3.getHourlyRate();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getEmail();
+        partner3.login("", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17404() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17404");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.login("", "partner");
+        partner3.login("partner", "hi!");
+        java.lang.String str19 = partner3.getEmail();
+        java.lang.String str20 = partner3.getEmail();
+        java.lang.String str21 = partner3.getEmail();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+    }
+
+    @Test
+    public void test17405() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17405");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+    }
+
+    @Test
+    public void test17406() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17406");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str17 = partner3.getAccountType();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17407() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17407");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(false);
+        partner3.login("", "");
+        partner3.viewProfile();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getPassword();
+        java.lang.String str16 = partner3.getEmail();
+        boolean boolean17 = partner3.isVerified();
+        java.lang.String str18 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+    }
+
+    @Test
+    public void test17408() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17408");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        partner3.login("partner", "hi!");
+        java.lang.String str16 = partner3.getAccountType();
+        java.lang.String str17 = partner3.getPassword();
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+    }
+
+    @Test
+    public void test17409() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17409");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getPassword();
+        double double11 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        partner3.setVerified(true);
+        partner3.login("hi!", "");
+        double double19 = partner3.getHourlyRate();
+        java.lang.String str20 = partner3.getID();
+        java.lang.String str21 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "hi!" + "'", str20, "hi!");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+    }
+
+    @Test
+    public void test17410() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17410");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.setVerified(true);
+        partner3.login("partner", "");
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getPassword();
+        double double13 = partner3.getHourlyRate();
+        boolean boolean14 = partner3.isVerified();
+        java.lang.String str15 = partner3.getEmail();
+        double double16 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+    }
+
+    @Test
+    public void test17411() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17411");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        java.lang.String str7 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+    }
+
+    @Test
+    public void test17412() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17412");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        partner3.login("", "");
+        java.lang.String str15 = partner3.getPassword();
+        double double16 = partner3.getHourlyRate();
+        partner3.login("hi!", "");
+        java.lang.String str20 = partner3.getEmail();
+        java.lang.String str21 = partner3.getAccountType();
+        java.lang.String str22 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "" + "'", str20, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "partner" + "'", str21, "partner");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+    }
+
+    @Test
+    public void test17413() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17413");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        partner3.setVerified(false);
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        java.lang.String str17 = partner3.getPassword();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17414() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17414");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str15 = partner3.getPassword();
+        partner3.setVerified(true);
+        double double18 = partner3.getHourlyRate();
+        java.lang.String str19 = partner3.getPassword();
+        java.lang.String str20 = partner3.getID();
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "hi!" + "'", str20, "hi!");
+    }
+
+    @Test
+    public void test17415() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17415");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+    }
+
+    @Test
+    public void test17416() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17416");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getEmail();
+        java.lang.String str10 = partner3.getAccountType();
+        partner3.setVerified(true);
+        double double13 = partner3.getHourlyRate();
+        double double14 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        java.lang.String str17 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+    }
+
+    @Test
+    public void test17417() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17417");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        double double6 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        partner3.login("", "");
+        partner3.logout();
+        java.lang.String str13 = partner3.getID();
+        partner3.logout();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+    }
+
+    @Test
+    public void test17418() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17418");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.login("", "partner");
+        java.lang.String str8 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str10 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+    }
+
+    @Test
+    public void test17419() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17419");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        java.lang.String str7 = partner3.getPassword();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str10 = partner3.getPassword();
+        partner3.login("", "hi!");
+        java.lang.String str14 = partner3.getAccountType();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+    }
+
+    @Test
+    public void test17420() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17420");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.login("partner", "");
+        java.lang.String str14 = partner3.getPassword();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+    }
+
+    @Test
+    public void test17421() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17421");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        partner3.login("partner", "partner");
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getID();
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17422() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17422");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.logout();
+        boolean boolean12 = partner3.isVerified();
+        double double13 = partner3.getHourlyRate();
+        double double14 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17423() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17423");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.logout();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getPassword();
+        boolean boolean12 = partner3.isVerified();
+        boolean boolean13 = partner3.isVerified();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test17424() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17424");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.viewProfile();
+        partner3.setVerified(true);
+        double double9 = partner3.getHourlyRate();
+        java.lang.String str10 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str13 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+    }
+
+    @Test
+    public void test17425() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17425");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        partner3.login("hi!", "partner");
+        partner3.login("hi!", "");
+        partner3.viewProfile();
+        java.lang.String str22 = partner3.getPassword();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+    }
+
+    @Test
+    public void test17426() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17426");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+    }
+
+    @Test
+    public void test17427() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17427");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getEmail();
+        double double5 = partner3.getHourlyRate();
+        partner3.login("", "partner");
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getEmail();
+        java.lang.String str12 = partner3.getID();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + double5 + "' != '" + 50.0d + "'", double5 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+    }
+
+    @Test
+    public void test17428() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17428");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getID();
+        double double14 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        java.lang.String str16 = partner3.getEmail();
+        boolean boolean17 = partner3.isVerified();
+        partner3.login("", "partner");
+        java.lang.String str21 = partner3.getID();
+        java.lang.String str22 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+    }
+
+    @Test
+    public void test17429() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17429");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        partner3.setVerified(true);
+        partner3.login("", "hi!");
+        partner3.viewProfile();
+        partner3.login("", "hi!");
+        java.lang.String str13 = partner3.getAccountType();
+        double double14 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+    }
+
+    @Test
+    public void test17430() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17430");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        double double7 = partner3.getHourlyRate();
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getAccountType();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getAccountType();
+        double double16 = partner3.getHourlyRate();
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+    }
+
+    @Test
+    public void test17431() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17431");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        partner3.login("partner", "");
+        java.lang.String str14 = partner3.getAccountType();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getAccountType();
+        boolean boolean17 = partner3.isVerified();
+        java.lang.String str18 = partner3.getAccountType();
+        double double19 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+    }
+
+    @Test
+    public void test17432() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17432");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        boolean boolean12 = partner3.isVerified();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getID();
+        partner3.login("", "partner");
+        partner3.logout();
+        partner3.logout();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        java.lang.String str23 = partner3.getPassword();
+        java.lang.String str24 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "hi!" + "'", str24, "hi!");
+    }
+
+    @Test
+    public void test17433() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17433");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.setVerified(true);
+        java.lang.String str18 = partner3.getAccountType();
+        java.lang.String str19 = partner3.getPassword();
+        boolean boolean20 = partner3.isVerified();
+        java.lang.String str21 = partner3.getPassword();
+        partner3.setVerified(false);
+        boolean boolean24 = partner3.isVerified();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertTrue("'" + boolean20 + "' != '" + true + "'", boolean20 == true);
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertTrue("'" + boolean24 + "' != '" + false + "'", boolean24 == false);
+    }
+
+    @Test
+    public void test17434() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17434");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean8 = partner3.isVerified();
+        partner3.setVerified(true);
+        boolean boolean11 = partner3.isVerified();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + true + "'", boolean11 == true);
+    }
+
+    @Test
+    public void test17435() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17435");
+        model.Partner partner3 = new model.Partner("", "partner", "partner");
+        double double4 = partner3.getHourlyRate();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getEmail();
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 50.0d + "'", double4 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+    }
+
+    @Test
+    public void test17436() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17436");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str9 = partner3.getEmail();
+        java.lang.String str10 = partner3.getEmail();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getID();
+        partner3.logout();
+        java.lang.String str17 = partner3.getEmail();
+        java.lang.String str18 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+    }
+
+    @Test
+    public void test17437() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17437");
+        model.Partner partner3 = new model.Partner("", "", "partner");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        double double6 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.setVerified(true);
+        double double13 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+    }
+
+    @Test
+    public void test17438() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17438");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getID();
+        partner3.logout();
+        partner3.login("", "partner");
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+    }
+
+    @Test
+    public void test17439() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17439");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.setVerified(false);
+        partner3.logout();
+        partner3.viewProfile();
+        boolean boolean16 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str19 = partner3.getID();
+        java.lang.Class<?> wildcardClass20 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass20);
+    }
+
+    @Test
+    public void test17440() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17440");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getID();
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str19 = partner3.getEmail();
+        java.lang.Class<?> wildcardClass20 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertNotNull(wildcardClass20);
+    }
+
+    @Test
+    public void test17441() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17441");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getEmail();
+        java.lang.String str15 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17442() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17442");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getAccountType();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getID();
+        partner3.logout();
+        java.lang.String str16 = partner3.getPassword();
+        java.lang.String str17 = partner3.getID();
+        partner3.viewProfile();
+        double double19 = partner3.getHourlyRate();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+    }
+
+    @Test
+    public void test17443() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17443");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.login("", "");
+        partner3.viewProfile();
+        partner3.viewProfile();
+        partner3.login("", "");
+        boolean boolean12 = partner3.isVerified();
+        partner3.viewProfile();
+        double double14 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        java.lang.String str18 = partner3.getPassword();
+        partner3.viewProfile();
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test17444() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17444");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.viewProfile();
+        double double13 = partner3.getHourlyRate();
+        java.lang.String str14 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+    }
+
+    @Test
+    public void test17445() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17445");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getEmail();
+        partner3.setVerified(false);
+        partner3.login("hi!", "");
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.String str16 = partner3.getEmail();
+        java.lang.String str17 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17446() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17446");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        boolean boolean11 = partner3.isVerified();
+        java.lang.String str12 = partner3.getID();
+        boolean boolean13 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + boolean11 + "' != '" + false + "'", boolean11 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+    }
+
+    @Test
+    public void test17447() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17447");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.logout();
+        partner3.login("partner", "");
+        boolean boolean17 = partner3.isVerified();
+        java.lang.String str18 = partner3.getAccountType();
+        partner3.setVerified(false);
+        partner3.login("hi!", "partner");
+        partner3.login("", "hi!");
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+    }
+
+    @Test
+    public void test17448() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17448");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getPassword();
+        boolean boolean12 = partner3.isVerified();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.setVerified(true);
+        java.lang.String str16 = partner3.getEmail();
+        double double17 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17449() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17449");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str12 = partner3.getID();
+        double double13 = partner3.getHourlyRate();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.login("partner", "");
+        java.lang.String str18 = partner3.getEmail();
+        java.lang.String str19 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str21 = partner3.getPassword();
+        java.lang.String str22 = partner3.getID();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "" + "'", str21, "");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "hi!" + "'", str22, "hi!");
+    }
+
+    @Test
+    public void test17450() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17450");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(false);
+        partner3.logout();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str21 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str24 = partner3.getPassword();
+        java.lang.String str25 = partner3.getAccountType();
+        partner3.login("hi!", "hi!");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "partner" + "'", str16, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "" + "'", str19, "");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+        org.junit.Assert.assertEquals("'" + str25 + "' != '" + "partner" + "'", str25, "partner");
+    }
+
+    @Test
+    public void test17451() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17451");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        partner3.setVerified(true);
+        partner3.login("", "hi!");
+        boolean boolean9 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getEmail();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getID();
+        double double17 = partner3.getHourlyRate();
+        partner3.logout();
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + true + "'", boolean9 == true);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17452() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17452");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        partner3.logout();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getEmail();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        boolean boolean12 = partner3.isVerified();
+        java.lang.String str13 = partner3.getEmail();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        partner3.login("", "hi!");
+        java.lang.String str20 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+    }
+
+    @Test
+    public void test17453() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17453");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.login("", "hi!");
+        partner3.logout();
+        java.lang.String str15 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+    }
+
+    @Test
+    public void test17454() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17454");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getID();
+        java.lang.String str12 = partner3.getAccountType();
+        double double13 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str17 = partner3.getPassword();
+        boolean boolean18 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+    }
+
+    @Test
+    public void test17455() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17455");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.logout();
+        partner3.login("hi!", "hi!");
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        partner3.login("hi!", "");
+        partner3.viewProfile();
+        partner3.viewProfile();
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+    }
+
+    @Test
+    public void test17456() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17456");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.logout();
+        java.lang.Class<?> wildcardClass11 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertNotNull(wildcardClass11);
+    }
+
+    @Test
+    public void test17457() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17457");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        partner3.logout();
+        double double11 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str18 = partner3.getID();
+        partner3.logout();
+        partner3.login("", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "hi!" + "'", str18, "hi!");
+    }
+
+    @Test
+    public void test17458() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17458");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.login("", "hi!");
+        partner3.login("partner", "hi!");
+        partner3.setVerified(true);
+        partner3.login("", "partner");
+        partner3.login("partner", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+    }
+
+    @Test
+    public void test17459() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17459");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        partner3.logout();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+    }
+
+    @Test
+    public void test17460() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17460");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str17 = partner3.getEmail();
+        boolean boolean18 = partner3.isVerified();
+        java.lang.Class<?> wildcardClass19 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertNotNull(wildcardClass19);
+    }
+
+    @Test
+    public void test17461() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17461");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.logout();
+        java.lang.String str8 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str11 = partner3.getEmail();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.setVerified(false);
+        boolean boolean15 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+    }
+
+    @Test
+    public void test17462() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17462");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        boolean boolean7 = partner3.isVerified();
+        partner3.logout();
+        partner3.logout();
+        partner3.viewProfile();
+        partner3.logout();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str16 = partner3.getID();
+        boolean boolean17 = partner3.isVerified();
+        partner3.login("partner", "partner");
+        double double21 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertTrue("'" + double21 + "' != '" + 50.0d + "'", double21 == 50.0d);
+    }
+
+    @Test
+    public void test17463() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17463");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        java.lang.String str6 = partner3.getEmail();
+        boolean boolean7 = partner3.isVerified();
+        java.lang.String str8 = partner3.getEmail();
+        double double9 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        partner3.login("", "partner");
+        java.lang.String str15 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+    }
+
+    @Test
+    public void test17464() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17464");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        double double11 = partner3.getHourlyRate();
+        java.lang.String str12 = partner3.getPassword();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getPassword();
+        boolean boolean15 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str17 = partner3.getID();
+        double double18 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "hi!" + "'", str17, "hi!");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+    }
+
+    @Test
+    public void test17465() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17465");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.logout();
+        java.lang.String str5 = partner3.getEmail();
+        boolean boolean6 = partner3.isVerified();
+        partner3.login("", "partner");
+        boolean boolean10 = partner3.isVerified();
+        java.lang.String str11 = partner3.getEmail();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.setVerified(false);
+        java.lang.Class<?> wildcardClass15 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass15);
+    }
+
+    @Test
+    public void test17466() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17466");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getID();
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getAccountType();
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getPassword();
+        java.lang.String str17 = partner3.getPassword();
+        java.lang.String str18 = partner3.getAccountType();
+        java.lang.String str19 = partner3.getID();
+        partner3.viewProfile();
+        partner3.login("partner", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "partner" + "'", str18, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+    }
+
+    @Test
+    public void test17467() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17467");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.logout();
+        double double14 = partner3.getHourlyRate();
+        java.lang.String str15 = partner3.getEmail();
+        java.lang.String str16 = partner3.getPassword();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str20 = partner3.getID();
+        double double21 = partner3.getHourlyRate();
+        boolean boolean22 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 50.0d + "'", double14 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "hi!" + "'", str20, "hi!");
+        org.junit.Assert.assertTrue("'" + double21 + "' != '" + 50.0d + "'", double21 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean22 + "' != '" + false + "'", boolean22 == false);
+    }
+
+    @Test
+    public void test17468() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17468");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getEmail();
+        partner3.viewProfile();
+        double double10 = partner3.getHourlyRate();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.login("", "");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "" + "'", str7, "");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test17469() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17469");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getPassword();
+        java.lang.String str14 = partner3.getID();
+        partner3.setVerified(false);
+        java.lang.Class<?> wildcardClass17 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test17470() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17470");
+        model.Partner partner3 = new model.Partner("partner", "hi!", "");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        partner3.setVerified(false);
+        boolean boolean8 = partner3.isVerified();
+        double double9 = partner3.getHourlyRate();
+        java.lang.Class<?> wildcardClass10 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "" + "'", str4, "");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass10);
+    }
+
+    @Test
+    public void test17471() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17471");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.viewProfile();
+        java.lang.String str5 = partner3.getAccountType();
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getPassword();
+        java.lang.String str8 = partner3.getAccountType();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "hi!" + "'", str11, "hi!");
+    }
+
+    @Test
+    public void test17472() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17472");
+        model.Partner partner3 = new model.Partner("", "partner", "");
+        java.lang.String str4 = partner3.getPassword();
+        java.lang.String str5 = partner3.getEmail();
+        partner3.login("hi!", "hi!");
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str11 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "" + "'", str5, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+    }
+
+    @Test
+    public void test17473() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17473");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        boolean boolean16 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + boolean16 + "' != '" + false + "'", boolean16 == false);
+    }
+
+    @Test
+    public void test17474() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17474");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.login("", "partner");
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getEmail();
+        double double10 = partner3.getHourlyRate();
+        partner3.logout();
+        java.lang.String str12 = partner3.getAccountType();
+        partner3.setVerified(true);
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "partner" + "'", str12, "partner");
+    }
+
+    @Test
+    public void test17475() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17475");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str11 = partner3.getEmail();
+        partner3.login("partner", "hi!");
+        java.lang.String str15 = partner3.getPassword();
+        partner3.login("hi!", "hi!");
+        partner3.viewProfile();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+    }
+
+    @Test
+    public void test17476() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17476");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getPassword();
+        double double11 = partner3.getHourlyRate();
+        double double12 = partner3.getHourlyRate();
+        java.lang.String str13 = partner3.getPassword();
+        partner3.login("", "");
+        java.lang.String str17 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 50.0d + "'", double11 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 50.0d + "'", double12 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "" + "'", str13, "");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "partner" + "'", str17, "partner");
+    }
+
+    @Test
+    public void test17477() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17477");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.login("partner", "partner");
+        partner3.login("hi!", "partner");
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+    }
+
+    @Test
+    public void test17478() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17478");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        java.lang.String str9 = partner3.getID();
+        boolean boolean10 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.logout();
+        java.lang.String str14 = partner3.getPassword();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.logout();
+        partner3.logout();
+        double double18 = partner3.getHourlyRate();
+        partner3.viewProfile();
+        java.lang.Class<?> wildcardClass20 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double18 + "' != '" + 50.0d + "'", double18 == 50.0d);
+        org.junit.Assert.assertNotNull(wildcardClass20);
+    }
+
+    @Test
+    public void test17479() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17479");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        partner3.login("", "partner");
+        partner3.login("hi!", "hi!");
+        java.lang.String str13 = partner3.getAccountType();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str16 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17480() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17480");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.viewProfile();
+        double double9 = partner3.getHourlyRate();
+        double double10 = partner3.getHourlyRate();
+        partner3.login("", "hi!");
+        java.lang.String str14 = partner3.getEmail();
+        partner3.setVerified(false);
+        java.lang.String str17 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 50.0d + "'", double9 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "hi!" + "'", str14, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17481() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17481");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        double double8 = partner3.getHourlyRate();
+        boolean boolean9 = partner3.isVerified();
+        partner3.logout();
+        partner3.viewProfile();
+        java.lang.String str12 = partner3.getEmail();
+        double double13 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "" + "'", str12, "");
+        org.junit.Assert.assertTrue("'" + double13 + "' != '" + 50.0d + "'", double13 == 50.0d);
+    }
+
+    @Test
+    public void test17482() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17482");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        partner3.setVerified(false);
+        java.lang.String str10 = partner3.getID();
+        partner3.viewProfile();
+        partner3.login("", "");
+        java.lang.String str15 = partner3.getPassword();
+        double double16 = partner3.getHourlyRate();
+        double double17 = partner3.getHourlyRate();
+        boolean boolean18 = partner3.isVerified();
+        partner3.setVerified(true);
+        partner3.logout();
+        double double22 = partner3.getHourlyRate();
+        boolean boolean23 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean18 + "' != '" + false + "'", boolean18 == false);
+        org.junit.Assert.assertTrue("'" + double22 + "' != '" + 50.0d + "'", double22 == 50.0d);
+        org.junit.Assert.assertTrue("'" + boolean23 + "' != '" + true + "'", boolean23 == true);
+    }
+
+    @Test
+    public void test17483() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17483");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        partner3.setVerified(true);
+        partner3.login("partner", "partner");
+        java.lang.String str11 = partner3.getPassword();
+        java.lang.String str12 = partner3.getEmail();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str16 = partner3.getPassword();
+        double double17 = partner3.getHourlyRate();
+        java.lang.String str18 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str18 + "' != '" + "" + "'", str18, "");
+    }
+
+    @Test
+    public void test17484() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17484");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getAccountType();
+        java.lang.String str9 = partner3.getAccountType();
+        java.lang.String str10 = partner3.getID();
+        partner3.setVerified(false);
+        boolean boolean13 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str15 = partner3.getPassword();
+        partner3.viewProfile();
+        partner3.setVerified(false);
+        double double19 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "partner" + "'", str9, "partner");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "" + "'", str15, "");
+        org.junit.Assert.assertTrue("'" + double19 + "' != '" + 50.0d + "'", double19 == 50.0d);
+    }
+
+    @Test
+    public void test17485() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17485");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.login("hi!", "");
+        java.lang.String str11 = partner3.getPassword();
+        boolean boolean12 = partner3.isVerified();
+        partner3.login("", "partner");
+        partner3.login("", "partner");
+        java.lang.String str19 = partner3.getID();
+        java.lang.Class<?> wildcardClass20 = partner3.getClass();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "hi!" + "'", str19, "hi!");
+        org.junit.Assert.assertNotNull(wildcardClass20);
+    }
+
+    @Test
+    public void test17486() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17486");
+        model.Partner partner3 = new model.Partner("hi!", "partner", "");
+        java.lang.String str4 = partner3.getEmail();
+        partner3.logout();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getEmail();
+        java.lang.String str8 = partner3.getPassword();
+        boolean boolean9 = partner3.isVerified();
+        partner3.login("partner", "");
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+    }
+
+    @Test
+    public void test17487() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17487");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getEmail();
+        java.lang.String str6 = partner3.getAccountType();
+        java.lang.String str7 = partner3.getAccountType();
+        boolean boolean8 = partner3.isVerified();
+        boolean boolean9 = partner3.isVerified();
+        java.lang.String str10 = partner3.getID();
+        java.lang.String str11 = partner3.getPassword();
+        boolean boolean12 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "hi!" + "'", str10, "hi!");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+    }
+
+    @Test
+    public void test17488() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17488");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        partner3.viewProfile();
+        java.lang.String str7 = partner3.getEmail();
+        double double8 = partner3.getHourlyRate();
+        java.lang.String str9 = partner3.getID();
+        partner3.logout();
+        partner3.setVerified(true);
+        java.lang.String str13 = partner3.getAccountType();
+        boolean boolean14 = partner3.isVerified();
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 50.0d + "'", double8 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + true + "'", boolean14 == true);
+    }
+
+    @Test
+    public void test17489() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17489");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        java.lang.String str4 = partner3.getAccountType();
+        java.lang.String str5 = partner3.getID();
+        java.lang.String str6 = partner3.getAccountType();
+        double double7 = partner3.getHourlyRate();
+        java.lang.String str8 = partner3.getPassword();
+        partner3.logout();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "partner" + "'", str4, "partner");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "hi!" + "'", str5, "hi!");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertTrue("'" + double7 + "' != '" + 50.0d + "'", double7 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+    }
+
+    @Test
+    public void test17490() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17490");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        double double6 = partner3.getHourlyRate();
+        partner3.setVerified(true);
+        java.lang.String str9 = partner3.getID();
+        boolean boolean10 = partner3.isVerified();
+        partner3.setVerified(false);
+        partner3.logout();
+        java.lang.String str14 = partner3.getPassword();
+        double double15 = partner3.getHourlyRate();
+        partner3.setVerified(false);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + double6 + "' != '" + 50.0d + "'", double6 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+    }
+
+    @Test
+    public void test17491() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17491");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getAccountType();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.login("", "");
+        java.lang.String str15 = partner3.getAccountType();
+        partner3.login("hi!", "partner");
+        java.lang.String str19 = partner3.getAccountType();
+        java.lang.String str20 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "partner" + "'", str10, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "partner" + "'", str15, "partner");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "partner" + "'", str20, "partner");
+    }
+
+    @Test
+    public void test17492() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17492");
+        model.Partner partner3 = new model.Partner("", "partner", "partner");
+        partner3.setVerified(true);
+        partner3.login("", "partner");
+        boolean boolean9 = partner3.isVerified();
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + true + "'", boolean9 == true);
+    }
+
+    @Test
+    public void test17493() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17493");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getAccountType();
+        partner3.login("hi!", "hi!");
+        partner3.logout();
+        java.lang.String str11 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str13 = partner3.getID();
+        java.lang.String str14 = partner3.getAccountType();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "partner" + "'", str6, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "" + "'", str11, "");
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "hi!" + "'", str13, "hi!");
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+    }
+
+    @Test
+    public void test17494() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17494");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getPassword();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        boolean boolean12 = partner3.isVerified();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getPassword();
+        partner3.setVerified(true);
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "" + "'", str9, "");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+    }
+
+    @Test
+    public void test17495() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17495");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.logout();
+        java.lang.String str8 = partner3.getPassword();
+        java.lang.String str9 = partner3.getID();
+        double double10 = partner3.getHourlyRate();
+        partner3.login("partner", "");
+        java.lang.String str14 = partner3.getAccountType();
+        double double15 = partner3.getHourlyRate();
+        java.lang.String str16 = partner3.getID();
+        java.lang.String str17 = partner3.getPassword();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "" + "'", str8, "");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 50.0d + "'", double10 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertTrue("'" + double15 + "' != '" + 50.0d + "'", double15 == 50.0d);
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str17 + "' != '" + "" + "'", str17, "");
+    }
+
+    @Test
+    public void test17496() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17496");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        java.lang.String str8 = partner3.getID();
+        java.lang.String str9 = partner3.getID();
+        partner3.setVerified(true);
+        boolean boolean12 = partner3.isVerified();
+        java.lang.String str13 = partner3.getAccountType();
+        partner3.setVerified(false);
+        double double16 = partner3.getHourlyRate();
+        double double17 = partner3.getHourlyRate();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "hi!" + "'", str8, "hi!");
+        org.junit.Assert.assertEquals("'" + str9 + "' != '" + "hi!" + "'", str9, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + true + "'", boolean12 == true);
+        org.junit.Assert.assertEquals("'" + str13 + "' != '" + "partner" + "'", str13, "partner");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+        org.junit.Assert.assertTrue("'" + double17 + "' != '" + 50.0d + "'", double17 == 50.0d);
+    }
+
+    @Test
+    public void test17497() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17497");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        boolean boolean5 = partner3.isVerified();
+        java.lang.String str6 = partner3.getID();
+        java.lang.String str7 = partner3.getID();
+        partner3.setVerified(true);
+        java.lang.String str10 = partner3.getEmail();
+        partner3.setVerified(true);
+        partner3.login("", "");
+        java.lang.String str16 = partner3.getID();
+        partner3.viewProfile();
+        partner3.viewProfile();
+        java.lang.String str19 = partner3.getAccountType();
+        java.lang.String str20 = partner3.getID();
+        java.lang.String str21 = partner3.getID();
+        java.lang.String str22 = partner3.getPassword();
+        java.lang.String str23 = partner3.getEmail();
+        java.lang.String str24 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "hi!" + "'", str6, "hi!");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "hi!" + "'", str7, "hi!");
+        org.junit.Assert.assertEquals("'" + str10 + "' != '" + "" + "'", str10, "");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "hi!" + "'", str16, "hi!");
+        org.junit.Assert.assertEquals("'" + str19 + "' != '" + "partner" + "'", str19, "partner");
+        org.junit.Assert.assertEquals("'" + str20 + "' != '" + "hi!" + "'", str20, "hi!");
+        org.junit.Assert.assertEquals("'" + str21 + "' != '" + "hi!" + "'", str21, "hi!");
+        org.junit.Assert.assertEquals("'" + str22 + "' != '" + "" + "'", str22, "");
+        org.junit.Assert.assertEquals("'" + str23 + "' != '" + "" + "'", str23, "");
+        org.junit.Assert.assertEquals("'" + str24 + "' != '" + "" + "'", str24, "");
+    }
+
+    @Test
+    public void test17498() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17498");
+        model.Partner partner3 = new model.Partner("hi!", "", "hi!");
+        partner3.setVerified(false);
+        java.lang.String str6 = partner3.getPassword();
+        java.lang.String str7 = partner3.getAccountType();
+        partner3.viewProfile();
+        partner3.logout();
+        partner3.logout();
+        java.lang.String str11 = partner3.getAccountType();
+        java.lang.String str12 = partner3.getID();
+        boolean boolean13 = partner3.isVerified();
+        java.lang.String str14 = partner3.getAccountType();
+        partner3.logout();
+        double double16 = partner3.getHourlyRate();
+        partner3.login("", "partner");
+        org.junit.Assert.assertEquals("'" + str6 + "' != '" + "" + "'", str6, "");
+        org.junit.Assert.assertEquals("'" + str7 + "' != '" + "partner" + "'", str7, "partner");
+        org.junit.Assert.assertEquals("'" + str11 + "' != '" + "partner" + "'", str11, "partner");
+        org.junit.Assert.assertEquals("'" + str12 + "' != '" + "hi!" + "'", str12, "hi!");
+        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "partner" + "'", str14, "partner");
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 50.0d + "'", double16 == 50.0d);
+    }
+
+    @Test
+    public void test17499() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17499");
+        model.Partner partner3 = new model.Partner("", "", "hi!");
+        java.lang.String str4 = partner3.getID();
+        java.lang.String str5 = partner3.getAccountType();
+        boolean boolean6 = partner3.isVerified();
+        partner3.viewProfile();
+        java.lang.String str8 = partner3.getAccountType();
+        partner3.logout();
+        boolean boolean10 = partner3.isVerified();
+        partner3.login("", "partner");
+        java.lang.String str14 = partner3.getEmail();
+        java.lang.String str15 = partner3.getID();
+        java.lang.String str16 = partner3.getEmail();
+        org.junit.Assert.assertEquals("'" + str4 + "' != '" + "hi!" + "'", str4, "hi!");
+        org.junit.Assert.assertEquals("'" + str5 + "' != '" + "partner" + "'", str5, "partner");
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
+        org.junit.Assert.assertEquals("'" + str8 + "' != '" + "partner" + "'", str8, "partner");
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + false + "'", boolean10 == false);
+        org.junit.Assert.assertEquals("'" + str14 + "' != '" + "" + "'", str14, "");
+        org.junit.Assert.assertEquals("'" + str15 + "' != '" + "hi!" + "'", str15, "hi!");
+        org.junit.Assert.assertEquals("'" + str16 + "' != '" + "" + "'", str16, "");
+    }
+
+    @Test
+    public void test17500() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest34.test17500");
+        model.Partner partner3 = new model.Partner("hi!", "hi!", "");
+        partner3.setVerified(true);
+        boolean boolean6 = partner3.isVerified();
+        boolean boolean7 = partner3.isVerified();
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + true + "'", boolean6 == true);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + true + "'", boolean7 == true);
+    }
+}
+

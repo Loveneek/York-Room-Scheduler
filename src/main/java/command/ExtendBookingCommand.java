@@ -1,0 +1,15 @@
+package command;
+
+import java.time.LocalDateTime;
+import model.Booking;
+
+public class ExtendBookingCommand implements BookingCommand {
+    private Booking booking;
+    private LocalDateTime newCheckOut;
+    public ExtendBookingCommand(Booking booking, LocalDateTime newCheckOut){ this.booking = booking; this.newCheckOut = newCheckOut; }
+    @Override
+    public Booking execute() {
+        booking.extend(newCheckOut);
+        return booking;
+    }
+}
